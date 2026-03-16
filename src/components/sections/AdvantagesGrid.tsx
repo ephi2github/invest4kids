@@ -1,80 +1,81 @@
-import Container from "../layout/Container";
-import SectionHeading from "../ui/SectionHeading";
-import Button from "../ui/Button";
+import { Eye, Rocket, ShieldCheck, UserRound } from "lucide-react";
 
-const advantages = [
+const cards = [
   {
-    icon: (
-      <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
-      </svg>
-    ),
-    title: "Individual & independent",
+    title: "Individuell & unabhängig:",
     description:
-      "Every family is different, which is precisely why we don't develop cookie-cutter solutions. With us, you get a personalized strategy that fits your goals and your family situation.",
+      "Jede Familie ist anders und genau deshalb entwickeln wir keine 08/15 Lösungen. Bei uns bekommst du eine persönliche Strategie, die zu deinen Zielen und deiner Familiensituation passt.",
+    icon: UserRound,
   },
   {
-    icon: (
-      <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-      </svg>
-    ),
-    title: "Free of charge & transparent",
+    title: "Kostenlos & transparent:",
     description:
-      "The consultation is 100% free of charge and there are no hidden fees. We are paid directly by the product providers if you decide to go ahead with the implementation.",
+      "Die Beratung ist zu 100 % kostenfrei und ganz ohne versteckte Gebühren. Wir werden direkt von den Produktanbietern vergütet, wenn du dich für eine Umsetzung entscheidest.",
+    icon: ShieldCheck,
   },
   {
-    icon: (
-      <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" />
-      </svg>
-    ),
-    title: "Digital & flexible",
+    title: "Digital & flexible:",
     description:
-      "Our consultations are conducted entirely online via video call, conveniently from home and with flexible scheduling. This leaves you more time for your family.",
+      "Unsere Beratung läuft vollständig online über einen Video-Call, bequem von Zuhause und flexibel planbar. So bleibt dir mehr Zeit für deine Familie.",
+    icon: Rocket,
   },
   {
-    icon: (
-      <svg className="h-5 w-5 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-        <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342" />
-      </svg>
-    ),
-    title: "Understandable & at eye level",
+    title: "Verständlich & auf Augenhöhe",
     description:
-      "You don't need to be an expert in investments. We'll guide you step by step and explain everything so that you feel confident and know exactly what is happening with your child's money.",
+      "Du musst dich mit Investments nicht auskennen. Wir nehmen dich Schritt für Schritt mit und erklären alles so, dass du dich sicher fühlst und genau weißt, was mit dem Geld deines Kindes passiert.",
+    icon: Eye,
   },
-];
+] as const;
 
 export default function AdvantagesGrid() {
   return (
-    <section className="bg-gradient-to-b from-bg-light-blue/30 to-bg-light-blue/60 py-14 md:py-20">
-      <Container>
-        <SectionHeading title="Your advantages at a glance" />
-        <div className="grid gap-5 sm:grid-cols-2 lg:gap-6">
-          {advantages.map((item) => (
-            <div
-              key={item.title}
-              className="rounded-xl border border-border/40 bg-white p-5 shadow-sm transition-shadow duration-300 hover:shadow-md md:p-6"
+    <section className="bg-bg-light-blue">
+      <div className="mx-auto w-full max-w-[1100px] px-4 py-14 sm:px-6 sm:py-16 lg:px-0 lg:py-20">
+        {/* Heading */}
+        <div className="text-center">
+          <h2 className="mx-auto max-w-[1100px] font-poppins text-[27px]  font-bold  text-text-medium md:text-[34px]">
+            Deine Vorteile auf einen Blick
+          </h2>
+        </div>
+
+        {/* Card grid */}
+        <div className="mt-8 grid gap-6 lg:mt-9 lg:grid-cols-2 lg:gap-6 ">
+          {cards.map(({ title, description, icon: Icon }) => (
+            <article
+              key={title}
+              className="rounded-[24px]  px-6 py-6 shadow-[0_12px_24px_rgba(44,62,80,0.03)] sm:px-8 sm:py-8 lg:min-h-[219px] bg-[#FFFFFFB8]"
             >
-              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-lg bg-bg-light-blue">
-                {item.icon}
+              <div className="flex items-center gap-4">
+                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-[10px] bg-[#D7E4EA]">
+                  <Icon className="h-[18px] w-[18px] text-primary" strokeWidth={1.8} />
+                </div>
+                <h3 className="font-poppins text-[18px] lg:text-[20px] leading-[1.35] font-medium tracking-[-0.02em] text-text-medium">
+                  {title}
+                </h3>
               </div>
-              <h3 className="mb-1.5 text-[15px] font-semibold md:text-base">
-                {item.title}
-              </h3>
-              <p className="text-[13px] leading-relaxed text-text-medium md:text-sm">
-                {item.description}
+              <p className="mt-6 max-w-[530px] font-outfit text-base lg:text-[18px] leading-[1.3] font-normal text-[#4B5563]">
+                {description}
               </p>
-            </div>
+            </article>
           ))}
         </div>
-        <div className="mt-8 text-center">
-          <Button href="/invest4kids-konzept" variant="ghost" className="text-sm underline">
-            You can find out more about the Invest4Kids concept here &rarr;
-          </Button>
+
+        {/* Bottom actions */}
+        <div className="mt-7 flex flex-col gap-6 lg:mt-5 lg:flex-row lg:items-center lg:justify-between">
+          <a
+            href="#"
+            className="font-poppins text-[20px]  font-semibold tracking-[-0.02em] text-[#4B5563] underline  underline-offset-2"
+          >
+            mehr zum Invest4Kids Konzept findest du hier →
+          </a>
+          <button
+            type="button"
+            className=" text-base md:text-[18x]inline-flex h-[50px] items-center justify-center rounded-full bg-primary  hover:bg-accent-hover cursor-pointer hover:text-text-medium duration-300 font-outfit text-[16px] leading-none font-semibold text-white sm:w-auto sm:self-start py-[15px] px-[36px]"
+          >
+            Mehr dazu
+          </button>
         </div>
-      </Container>
+      </div>
     </section>
   );
 }

@@ -1,72 +1,170 @@
 "use client";
 
-import Image from "next/image";
+import { useState, useCallback, useEffect } from "react";
 import Container from "../layout/Container";
-import SectionHeading from "../ui/SectionHeading";
 import Button from "../ui/Button";
+import TeamCard from "../ui/TeamCard";
+import { ArrowRight } from "lucide-react";
+
+const CDN_BASE =
+  "https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/11/";
 
 const teamMembers = [
-  { name: "Marina", image: "/images/team/marina.webp" },
-  { name: "Patrick", image: "/images/team/patrick.webp" },
-  { name: "Sophie", image: "/images/team/sophie.webp" },
-  { name: "Felix", image: "/images/team/felix.webp" },
-  { name: "Oscar", image: "/images/team/oscar.webp" },
-  { name: "Laila", image: "/images/team/laila.webp" },
-  { name: "Bogdan", image: "/images/team/bogdan.webp" },
-  { name: "Torben", image: "/images/team/torben.webp" },
-  { name: "Alex", image: "/images/team/alex.webp" },
-  { name: "Susanna", image: "/images/team/susanna.webp" },
-  { name: "Tony", image: "/images/team/tony.webp" },
-  { name: "Janosch", image: "/images/team/janosch.webp" },
-  { name: "Till", image: "/images/team/till.webp" },
-  { name: "Mallik", image: "/images/team/mallik.webp" },
-  { name: "Glory", image: "/images/team/glory.webp" },
-  { name: "Finn", image: "/images/team/finn.webp" },
-  { name: "Sofia", image: "/images/team/sofia.webp" },
-  { name: "Bastian", image: "/images/team/bastian.webp" },
+  { name: "Laila", image: "Laila-Moor-Expertin-fuer-Kinderinvestments.webp", subtitle: "Expertin für Kinderinvestments" },
+  { name: "Bogdan", image: "Bogdan-Jakuschenko-Gruender-von-Invest4kids.webp", subtitle: "Gründer von Invest4kids" },
+  { name: "Torben", image: "Torben-Kratzke-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Alex", image: "Alexander-Min-Kim-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Susanna", image: "Susanna-Schmitz-Expertin-fuer-Kinderinvestments.webp", subtitle: "Expertin für Kinderinvestments" },
+  { name: "Tony", image: "Tony-Kotala-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Janosch", image: "Janosch-Eisenbart-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Till", image: "Till-Johan-Deraneck-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Tim", image: "Tim-Ruser-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Mallik", image: "Mallik-Godje-Issa-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Glory", image: "Glory-Mayasi-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Finn", image: "Finn-Diestel-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Sofia", image: "Sofia-Lasovskaja-Expertin-fuer-Kinderinvestments.webp", subtitle: "Expertin für Kinderinvestments" },
+  { name: "Bastian", image: "Bastian-Weise-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Jerome", image: "Jerome-Joseph-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Patrick", image: "Patrick-Makaryk-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
+  { name: "Felix", image: "Felix-Kleinhenz-Experte-fuer-Kinderinvestments.webp", subtitle: "Experte für Kinderinvestments" },
 ];
 
-export default function TeamCarousel() {
-  return (
-    <section className="py-14 md:py-20">
-      <Container>
-        <SectionHeading title="Your Invest4Kids team" />
+const CARD_W = 253;
+const GAP = 24;
+const EDGE_BUFFER = 2;
 
-        {/* Scrollable on mobile, wrapped grid on desktop */}
-        <div className="overflow-x-auto pb-2 md:overflow-visible">
-          <div className="flex gap-5 md:flex-wrap md:justify-center">
-            {teamMembers.map((member) => (
-              <div
-                key={member.name}
-                className="flex w-[88px] flex-shrink-0 flex-col items-center text-center md:w-[100px]"
-              >
-                <div className="relative mb-2 h-[72px] w-[72px] overflow-hidden rounded-full bg-bg-light-blue md:h-[88px] md:w-[88px]">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    fill
-                    className="object-cover"
-                    sizes="88px"
-                  />
-                </div>
-                <span className="text-xs font-medium text-primary md:text-sm">
-                  {member.name}
-                </span>
-              </div>
+export default function TeamCarousel() {
+  const teamCount = teamMembers.length;
+  const [carouselMembers, setCarouselMembers] = useState(() => [
+    ...teamMembers,
+    ...teamMembers,
+  ]);
+  const [centerIndex, setCenterIndex] = useState(teamCount + 3);
+  const [virtualStartIndex, setVirtualStartIndex] = useState(0);
+  const [isIndexAdjusting, setIsIndexAdjusting] = useState(false);
+
+  const prev = useCallback(() => {
+    if (centerIndex <= EDGE_BUFFER) {
+      setIsIndexAdjusting(true);
+      setCarouselMembers((prevMembers) => [...teamMembers, ...prevMembers]);
+      setVirtualStartIndex((prevValue) => prevValue - teamCount);
+      setCenterIndex((prevIndex) => prevIndex + teamCount - 1);
+      return;
+    }
+
+    setCenterIndex((i) => i - 1);
+  }, [centerIndex, teamCount]);
+
+  const next = useCallback(() => {
+    if (centerIndex >= carouselMembers.length - (EDGE_BUFFER + 1)) {
+      setCarouselMembers((prevMembers) => [...prevMembers, ...teamMembers]);
+    }
+
+    setCenterIndex((i) => i + 1);
+  }, [centerIndex, carouselMembers.length]);
+
+  const offset = centerIndex * (CARD_W + GAP) + CARD_W / 2;
+
+  useEffect(() => {
+    if (isIndexAdjusting) {
+      const frame = requestAnimationFrame(() => {
+        setIsIndexAdjusting(false);
+      });
+
+      return () => cancelAnimationFrame(frame);
+    }
+  }, [isIndexAdjusting]);
+
+  return (
+    <section className="bg-bg-cream">
+      <div className="py-14 md:pt-25 md:pb-17.5 mx-auto w-full md:max-w-346.5">
+        <div className="mx-35.75 flex items-center justify-between">
+          <h2 className="text-2xl font-bold leading-tight md:text-[28px]">
+            Dein Invest4Kids Team
+          </h2>
+          <a
+            href="/team"
+            className="items-center justify-center border rounded-full transition-all duration-200 hidden text-[18px] sm:inline-flex font-medium h-12.5 py-3.75 px-9 font-outfit border-accent-hover! bg-white!"
+          >
+            Mehr zum Team erfahren <ArrowRight width={16} height={16} className="ml-0.5" />
+          </a>
+        </div>
+
+        <div className="overflow-x-hidden pt-20 z-10 pb-7.5 mt-8.5">
+          <div
+            className={`flex ease-in-out ${isIndexAdjusting ? "" : "transition-transform duration-500"}`}
+            style={{
+              gap: `${GAP}px`,
+              transform: `translateX(calc(50% - ${offset}px))`,
+            }}
+          >
+            {carouselMembers.map((member, idx) => (
+              <TeamCard
+                key={`${member.name}-${virtualStartIndex + idx}`}
+                name={member.name}
+                imageUrl={`${CDN_BASE}${member.image}`}
+                subtitle={member.subtitle}
+                isCenter={idx === centerIndex}
+              />
             ))}
           </div>
         </div>
 
-        <p className="mt-2 text-center text-xs text-text-muted">
-          Expert for children&apos;s investments
-        </p>
-
-        <div className="mt-8 text-center">
-          <Button href="/team" variant="outline" className="text-sm">
-            Learn more about the team
-          </Button>
+        {/* Navigation arrows */}
+        <div className="-mt-13 flex items-center justify-center gap-5 relative z-20">
+          <button
+            onClick={prev}
+            aria-label="Vorheriges Teammitglied"
+            className="cursor-pointer p-2 hover:opacity-70 hover:text-accent-hover text-primary transition-colors duration-300"
+          >
+            <svg
+              width="72"
+              height="16"
+              viewBox="0 0 72 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M70 8H2M2 8L9 1.5M2 8L9 14.5"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+          <button
+            onClick={next}
+            aria-label="Nächstes Teammitglied"
+            className="cursor-pointer p-2 hover:opacity-70 hover:text-accent-hover text-primary transition-colors duration-300"
+          >
+            <svg
+              width="72"
+              height="16"
+              viewBox="0 0 72 16"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M2 8H70M70 8L63 1.5M70 8L63 14.5"
+                stroke="currentColor"
+                strokeWidth="2.5"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
         </div>
-      </Container>
+
+        {/* Mobile-only CTA button */}
+        <Container>
+          <div className="mt-8 text-center sm:hidden">
+            <Button href="/team" variant="outline" className="text-sm">
+              Mehr zum Team erfahren &rarr;
+            </Button>
+          </div>
+        </Container>
+      </div>
     </section>
   );
 }

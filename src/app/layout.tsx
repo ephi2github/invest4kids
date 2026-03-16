@@ -14,14 +14,20 @@ const poppins = Poppins({
 const outfit = Outfit({
   variable: "--font-outfit",
   subsets: ["latin"],
-  weight: ["100", "200", "300", "400", "500", "600"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Invest4Kids - Expert Help with Investing for Children",
+  title: "Invest4Kids - Expertenhilfe beim Geld anlegen für Kinder",
   description:
-    "Invest4Kids is the first port of call for parents who want to invest wisely and securely in ETFs for their children.",
+    "Professionelle Beratung für Kinderinvestments. Mit uns die richtige Sparanlage für Deine Kinder finden. Kostenfreie Beratung anfragen!",
+  openGraph: {
+    locale: "de_DE",
+    siteName: "Invest4Kids",
+    type: "website",
+    url: "https://invest4kids.de/",
+  },
 };
 
 export default function RootLayout({
@@ -30,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="de">
       <body className={`${poppins.variable} ${outfit.variable} antialiased`}>
         <Header />
         {children}

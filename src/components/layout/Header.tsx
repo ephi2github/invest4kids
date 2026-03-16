@@ -222,16 +222,17 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white px-5">
+    <header className="sticky top-0 z-50 w-full bg-white px-5 shadow-[0_14px_50px_rgba(0,0,0,0.14)]">
       <Container className="px-0 w-full max-w-275!">
         <div className="hidden h-30 items-center py-8.75 lg:flex ">
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logo.png"
+              src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2024/10/Invest-4-kids-logo.png"
               alt="Invest4Kids"
               width={130}
               height={82}
               className="h-11.25 w-auto"
+              unoptimized
               priority
             />
           </Link>
@@ -316,7 +317,7 @@ export default function Header() {
 
           <div className="flex h-12.5 w-[416.25px] items-center justify-between gap-4">
             <Link
-              href="https://www.invest4kids-beratung.de/start/"
+              href="https://funnel.perspective.co/60b7c8d2bcad43001f5c35a3/690b34a62100cd003c13e6ad/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary px-9 py-3.75 font-outfit text-[18px] font-medium leading-5 text-white transition-colors hover:bg-primary-dark"
@@ -362,17 +363,18 @@ export default function Header() {
         <div className="flex h-22 items-center justify-between px-4 md:px-6 lg:hidden">
           <Link href="/" className="shrink-0">
             <Image
-              src="/images/logo.png"
+              src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2024/10/Invest-4-kids-logo.png"
               alt="Invest4Kids"
               width={130}
               height={82}
               className="h-11 w-auto"
+              unoptimized
               priority
             />
           </Link>
 
           <Link
-            href="https://www.invest4kids-beratung.de/start/"
+            href="https://funnel.perspective.co/60b7c8d2bcad43001f5c35a3/690b34a62100cd003c13e6ad/"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-1.5 rounded-full bg-primary px-5 py-2.5 font-outfit text-sm font-medium text-white transition-colors hover:bg-primary-dark"
@@ -518,7 +520,7 @@ export default function Header() {
 
               {/* CTA Button */}
               <Link
-                href="https://www.invest4kids-beratung.de/start/"
+                href="https://funnel.perspective.co/60b7c8d2bcad43001f5c35a3/690b34a62100cd003c13e6ad/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 flex items-center justify-center gap-2 rounded-full bg-primary px-5 py-3.5 font-outfit text-base font-medium text-white transition-colors hover:bg-primary-dark"

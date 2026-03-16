@@ -19,16 +19,14 @@
   --color-bg-blue-mist: #F2FAFA;
   --color-border: #E1E2E2;
   --color-border-light: #CCCED0;
+
+  --animate-known-from-marquee: known-from-marquee 40s linear infinite;
 }
 
 body {
   font-family: var(--font-poppins);
   color: var(--color-text-dark);
   background: #ffffff;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: var(--color-primary);
 }
 
 /* Floating bubble animations matching original site */
@@ -47,4 +45,34 @@ h1, h2, h3, h4, h5, h6 {
 @keyframes gradientShift {
   0% { background-position: 0% 50%; }
   100% { background-position: 100% 50%; }
+}
+
+@keyframes wobbleSoft {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  25% { transform: translate3d(1px, -4px, 0) rotate(-1deg); }
+  50% { transform: translate3d(-2px, -7px, 0) rotate(0.8deg); }
+  75% { transform: translate3d(2px, -3px, 0) rotate(-0.5deg); }
+}
+
+@keyframes wobbleDrift {
+  0%, 100% { transform: translate3d(0, 0, 0) scale(1); }
+  20% { transform: translate3d(-2px, -3px, 0) scale(1.01); }
+  55% { transform: translate3d(2px, -8px, 0) scale(0.995); }
+  80% { transform: translate3d(-1px, -4px, 0) scale(1.005); }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* WhatsApp floating button pulse */
+@keyframes pulse-ring {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  100% { transform: scale(1.4); opacity: 0; }
+}
+
+@keyframes known-from-marquee {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
 }

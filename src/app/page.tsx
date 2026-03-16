@@ -1,25 +1,25 @@
 import HeroSection from "@/components/sections/HeroSection";
-import IntroSection from "@/components/sections/IntroSection";
 import AdvantagesGrid from "@/components/sections/AdvantagesGrid";
 import TeamCarousel from "@/components/sections/TeamCarousel";
 import ProcessTimeline from "@/components/sections/ProcessTimeline";
 import TestimonialsSection from "@/components/sections/TestimonialsSection";
 import CTABanner from "@/components/sections/CTABanner";
-import WeAreSection from "@/components/sections/WeAreSection";
-import KnownFrom from "@/components/sections/KnownFrom";
+import MissionSection from "@/components/sections/MissionSection";
+import KnownFromSection from "@/components/sections/KnownFromSection";
+import MapVimeoSection from "../components/sections/MapVimeoSection";
 
 export default function Home() {
-  return (
-    <>
-      <HeroSection />
-      <IntroSection />
-      <AdvantagesGrid />
-      <TeamCarousel />
-      <ProcessTimeline />
-      <TestimonialsSection />
-      <CTABanner />
-      <WeAreSection />
-      <KnownFrom />
-    </>
-  );
+    return (
+        <main>
+            <HeroSection/>
+            <MissionSection/>
+            <AdvantagesGrid/>
+            <TeamCarousel/>
+            <ProcessTimeline/>
+            <TestimonialsSection/>
+            <CTABanner/>
+            <MapVimeoSection />
+            <KnownFromSection />
+        </main>
+    );
 }
