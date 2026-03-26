@@ -236,7 +236,7 @@ export default function Header() {
               width={130}
               height={82}
               className="h-11.25 w-auto"
-              priority
+              preload
             />
           </Link>
 
@@ -368,7 +368,7 @@ export default function Header() {
               width={1000}
               height={1000}
               className="h-11 w-auto"
-              priority
+              preload
             />
           </Link>
 

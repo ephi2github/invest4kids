@@ -254,6 +254,7 @@ export default function ErfahrungenHeroSection() {
               className="h-auto w-full object-contain"
               width={1000}
               height={1000}
+              preload
               draggable={false}
             />
 

@@ -79,7 +79,7 @@ export default function BlogPage() {
             <div className="mx-auto grid max-w-[1100px] gap-[16px] md:gap-[25px] md:grid-cols-[1fr_1fr]">
               <div className="overflow-hidden rounded-[10px] border border-[#D4DADF] bg-[#FDFDFD]">
                 <Link href={`/blog/${featuredPost.slug}`} className="block">
-                  <Image src={featuredPost.image} alt={featuredPost.title} className="w-full object-cover" width={1000} height={1000} draggable={false} />
+                  <Image src={featuredPost.image} alt={featuredPost.title} className="w-full object-cover" width={1000} height={1000} draggable={false} preload />
                 </Link>
 
                 <div className="bg-[#F8F9FA] p-[16px] md:p-[34px]">

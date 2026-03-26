@@ -12,7 +12,7 @@ export function TeamHeroSection() {
             width={2200}
             height={866}
             className="h-auto w-full"
-            priority
+            preload
           />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[48%] bg-linear-to-b from-transparent to-bg-light-blue" />
           <div className="pointer-events-none absolute inset-y-0 left-0 w-[24%] bg-linear-to-r from-bg-light-blue to-transparent" />

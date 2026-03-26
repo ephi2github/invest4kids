@@ -37,7 +37,7 @@ export function AboutHeroSection() {
             alt="The Invest4Kids team"
             width={530}
             height={350}
-            priority
+            preload
             className="relative h-[245.66px] w-93 rounded-2xl object-cover md:h-full md:w-full lg:h-87.5 lg:w-132.5"
           />
         </div>

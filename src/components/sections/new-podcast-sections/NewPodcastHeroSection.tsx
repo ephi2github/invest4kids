@@ -26,7 +26,7 @@ export default function NewPodcastHeroSection() {
               width={1512}
               height={884}
               className="block h-auto w-full"
-              priority
+              preload
             />
           </div>
         </div>

@@ -67,7 +67,7 @@ export default function ConsultationSection() {
             alt="Beratungsteam steht zusammen"
             width={575}
             height={442}
-            priority
+            preload
             className="ml-auto h-auto w-full max-w-none translate-y-10 object-contain object-right sm:translate-y-12 lg:absolute lg:right-0 lg:bottom-0 lg:w-[575px] lg:translate-y-0"
           />
         </div>

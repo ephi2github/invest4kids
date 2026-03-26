@@ -68,7 +68,6 @@ export default function HeroSection() {
                   width={23}
                   height={23}
                   className="h-5.75 w-full"
-                  priority
                 />
               </div>
               <p className="text-[16px] md:text-[18px] text-text-muted font-outfit">
@@ -97,7 +96,7 @@ export default function HeroSection() {
                 width={1000}
                 height={1000}
                 className="h-auto md:w-[487px] object-cover bg-transparent"
-                priority
+                preload
               />
             </div>
           </div>

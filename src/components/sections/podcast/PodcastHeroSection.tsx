@@ -22,7 +22,7 @@ export default function PodcastHeroSection() {
               alt="Zwei Personen sprechen in einem Podcast vor Mikrofonen"
               width={1512}
               height={884}
-              priority
+              preload
             />
           </div>
         </div>

@@ -40,6 +40,7 @@ export default function KonzeptHeroSection() {
               className="h-auto min-w-[280px] w-full shrink-0 object-contain lg:w-[538px] lg:max-w-[538px]"
               width={1000}
               height={1000}
+              preload
               draggable={false}
             />
           </div>
