@@ -1,13 +1,12 @@
-"use client";
 import Image from "next/image";
 import teamPortrait from "@/assets/images/home/mission/team-portrait.webp";
 import { Eye, Target } from "lucide-react";
-import React from "react";
+import { type ReactNode } from "react";
 
 function InfoIcon({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   return (
     <div className="flex h-10.25 w-10.25 shrink-0 items-center justify-center rounded-full bg-[#84B7CA4D]">

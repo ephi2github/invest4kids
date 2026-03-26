@@ -182,7 +182,7 @@ export default function TestimonialsSection({
           </div>
 
           <a
-            href="https://www.invest4kids-beratung.de/start-now?posthog_distinct_id=019cf192-9eb2-7336-8937-fc8fac979238"
+            href="https://www.invest4kids-beratung.de/start-now"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex w-full items-center justify-center gap-1.5 rounded-full border border-[#133A7D] bg-[#133A7D] px-9 py-[15px] font-outfit text-[16px] font-medium leading-none text-white transition-colors duration-300 hover:border-[#F8BF3C] hover:bg-[#F8BF3C] hover:text-[#2C3E50] md:w-auto md:text-[18px]"

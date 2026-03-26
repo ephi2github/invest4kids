@@ -65,9 +65,9 @@ export default function HeroSection() {
                 <Image
                   src={dmsStatsImage}
                   alt="5200+ Eltern vertrauen uns"
-                  width={23}
+                  width={70}
                   height={23}
-                  className="h-5.75 w-full"
+                  className="h-auto w-auto"
                 />
               </div>
               <p className="text-[16px] md:text-[18px] text-text-muted font-outfit">

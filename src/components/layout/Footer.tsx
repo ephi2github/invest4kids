@@ -133,7 +133,7 @@ export default function Footer() {
                             ) : null}
                           </Link>
                           {children && (
-                            <div className="invisible absolute top-full left-1/2 z-10 -translate-x-1/2 pt-2 opacity-0 transition-all group-hover/nav:visible group-hover/nav:opacity-100 lg:left-0 lg:translate-x-0">
+                            <div className="hidden lg:block invisible absolute top-full left-1/2 z-10 -translate-x-1/2 pt-2 opacity-0 transition-all group-hover/nav:visible group-hover/nav:opacity-100 lg:left-0 lg:translate-x-0">
                               <ul className="min-w-max rounded-lg bg-white py-2 shadow-[0_4px_20px_rgba(0,0,0,0.1)]">
                                 {children.map((child) => (
                                   <li key={child.href}>

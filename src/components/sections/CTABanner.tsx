@@ -1,3 +1,5 @@
+import DeferredIframe from "@/components/media/DeferredIframe";
+
 const CalendarIcon = () => (
   <svg
     aria-hidden="true"
@@ -44,7 +46,7 @@ export default function CTABanner() {
               </p>
 
               <a
-                  href="https://www.invest4kids-beratung.de/start-now?posthog_distinct_id=019cf192-9eb2-7336-8937-fc8fac979238"
+                  href="https://www.invest4kids-beratung.de/start-now"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-[10px] hidden w-fit items-center gap-1.5 rounded-full border border-[#133A7D] bg-[#133A7D] px-9 py-[15px] font-outfit text-[18px] font-medium leading-[100%] text-white transition-colors duration-300 hover:border-[#F8BF3C] hover:bg-[#F8BF3C] hover:text-[#2C3E50] md:inline-flex"
@@ -57,11 +59,11 @@ export default function CTABanner() {
         </div>
         <div className="relative flex w-full flex-col justify-center bg-[#133A7D] px-[20px] pb-[20px] pt-[50px] md:px-[50px] md:py-[100px] md:w-1/2 md:min-h-[35vw]">
           <div className="relative z-10 overflow-hidden rounded-[20px]">
-            <iframe
-                id="ps-embed-690374c8806661003ce84273"
-                title="Invest4Kids Formular"
-                src="https://www.invest4kids-beratung.de/start?embed=1&amp;header=0&amp;footer=0&amp;cookieBanner=1&amp;autoHeight=1&amp;posthog_distinct_id=019cf4a2-e2a5-7dd5-b3e3-274f234a205d"
-                style={{border: "0px", width: "100%", height: "396px"}}
+            <DeferredIframe
+              title="Invest4Kids Formular"
+              src="https://www.invest4kids-beratung.de/start?embed=1&header=0&footer=0&cookieBanner=1&autoHeight=1"
+              description="Das Beratungsformular wird erst geladen, wenn du es aktiv öffnest. So bleibt die Seite schneller und datensparsamer."
+              buttonLabel="Beratungsformular laden"
             />
           </div>
         </div>
