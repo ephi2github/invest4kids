@@ -35,7 +35,7 @@ export default function ErfahrungenCtaSection() {
                 href="https://www.invest4kids-beratung.de/start/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex min-h-[50px] w-full max-w-[332px] cursor-pointer items-center justify-center rounded-full border border-[#F8BF3C] bg-white px-[36px] py-[15px] text-center text-[15px] leading-none font-[600] whitespace-nowrap text-[#2C3E50] transition-all duration-300 hover:bg-[#F8BF3C] hover:text-[#2C3E50] hover:border-[#F8BF3C] sm:w-auto sm:min-w-[320px] sm:text-[16px] md:min-h-[54px] md:text-[17px]"
+                className="inline-flex min-h-[50px] w-full md:w-auto cursor-pointer items-center justify-center rounded-full border border-[#F8BF3C] bg-white px-[36px] py-[15px] text-center text-[15px] leading-none font-medium whitespace-nowrap text-[#2C3E50] transition-all duration-300 hover:bg-[#F8BF3C] hover:text-[#2C3E50] hover:border-[#F8BF3C] sm:w-auto sm:min-w-[320px] sm:text-[16px] md:min-h-[54px] md:text-[17px]"
               >
                 <span className="mr-[8px] shrink-0 md:mr-[10px]">
                   <svg

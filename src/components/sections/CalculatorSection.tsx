@@ -34,7 +34,7 @@ export default function CalculatorSection() {
             verständlich dargestellt.
           </p>
 
-          <p className="mt-[8px] font-outfit text-[16px] text-white/90">
+          <p className="font-outfit text-[16px] md:text-[18px] text-white/90">
             Angepasst an:
           </p>
 

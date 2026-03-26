@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import googleIcon from "@/assets/images/erfahrungen/google-icon.svg";
 import googleStar from "@/assets/images/erfahrungen/google-star.svg";
 import reviewAvatarAm from "@/assets/images/erfahrungen/review-avatar-am.webp";
@@ -302,12 +302,34 @@ export default function ErfahrungenReviewsSection() {
     setReviewIndex((prev) => Math.min(prev, maxReviewIndex));
   }, [maxReviewIndex]);
 
+  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  const startAutoSlide = useCallback(() => {
+    if (intervalRef.current) clearInterval(intervalRef.current);
+    intervalRef.current = setInterval(() => {
+      setReviewIndex((prev) => (prev >= maxReviewIndex ? 0 : prev + 1));
+    }, 5000);
+  }, [maxReviewIndex]);
+
+  useEffect(() => {
+    if (reviewsModalOpen) {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+      return;
+    }
+    startAutoSlide();
+    return () => {
+      if (intervalRef.current) clearInterval(intervalRef.current);
+    };
+  }, [startAutoSlide, reviewsModalOpen]);
+
   const showPrevReviews = () => {
     setReviewIndex((prev) => Math.max(prev - 1, 0));
+    startAutoSlide();
   };
 
   const showNextReviews = () => {
     setReviewIndex((prev) => Math.min(prev + 1, maxReviewIndex));
+    startAutoSlide();
   };
 
   return (

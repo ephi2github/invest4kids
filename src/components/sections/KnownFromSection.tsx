@@ -42,7 +42,7 @@ const trackLogos = [...logos, ...logos, ...logos];
 
 export default function KnownFromSection() {
   return (
-    <section className="w-full bg-white py-[52px] md:py-16 lg:py-[72px]">
+    <section className="w-full bg-[#FBFBFB] py-[52px] md:py-16 lg:py-[72px]">
       <div className="w-full">
         <h2 className="mb-[22px] text-center font-poppins text-[27px] leading-[1.35] font-bold text-text-medium md:mb-8 md:text-[32px] md:leading-[1.25] lg:text-[34px]">
           Bekannt aus

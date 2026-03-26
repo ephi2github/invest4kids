@@ -29,7 +29,7 @@ function StatIcon() {
 export default function ConditionsSection() {
   return (
     <section
-      className="px-[20px] py-[50px] md:px-[30px] md:py-[80px]"
+      className="px-[20px] py-[50px] md:px-[30px] md:py-[100px]"
       style={{
         background: "linear-gradient(102deg, #F2FAFA -2%, #FFFAEE 100%)",
       }}

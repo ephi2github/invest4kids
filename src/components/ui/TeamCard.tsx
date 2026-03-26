@@ -30,7 +30,7 @@ export default function TeamCard({
             height={668}
             className="h-full w-full object-contain object-top"
           />
-          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[46%] bg-linear-to-t from-white via-white/85 to-transparent" />
+          <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[46%] bg-linear-to-t from-white via-white/50 to-transparent" />
           <div className="pointer-events-none absolute inset-x-5 bottom-2 h-10 rounded-full bg-white/70 blur-xl" />
         </div>
 

@@ -17,7 +17,7 @@ const CalendarIcon = () => (
 export default function CTABanner() {
   return (
     <section className="overflow-hidden bg-[#EFFAFD]">
-      <div className="flex flex-col overflow-hidden bg-[#EFFAFD] md:flex-row md:pl-[30px]">
+      <div className="relative flex flex-col overflow-hidden bg-[#EFFAFD] md:flex-row md:pl-[30px]">
         <div className="flex w-full flex-col items-center justify-end px-[20px] py-[50px] md:w-1/2 md:items-end md:justify-center md:px-0 md:py-0 md:pt-[10px]">
           <div className="w-full md:w-auto md:pr-24">
             <div className="flex w-full max-w-[468px] flex-col gap-[24px] md:w-[468px]">
@@ -33,7 +33,7 @@ export default function CTABanner() {
                 </h2>
               </div>
 
-              <div className="min-h-[1px] w-full bg-[#84B7CA]" />
+              <div className="min-h-[1px] w-full bg-[#84B7CA]"/>
 
               <p className="font-outfit text-[16px] font-normal leading-[126%] text-[#4B5563] md:text-[18px] md:leading-[23px]">
                 Egal, ob du ganz neu einsteigen möchtest oder schon etwas
@@ -44,25 +44,24 @@ export default function CTABanner() {
               </p>
 
               <a
-                href="https://www.invest4kids-beratung.de/start-now?posthog_distinct_id=019cf192-9eb2-7336-8937-fc8fac979238"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-[10px] hidden w-fit items-center gap-1.5 rounded-full border border-[#133A7D] bg-[#133A7D] px-9 py-[15px] font-outfit text-[18px] font-medium leading-[100%] text-white transition-colors duration-300 hover:border-[#F8BF3C] hover:bg-[#F8BF3C] hover:text-[#2C3E50] md:inline-flex"
+                  href="https://www.invest4kids-beratung.de/start-now?posthog_distinct_id=019cf192-9eb2-7336-8937-fc8fac979238"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-[10px] hidden w-fit items-center gap-1.5 rounded-full border border-[#133A7D] bg-[#133A7D] px-9 py-[15px] font-outfit text-[18px] font-medium leading-[100%] text-white transition-colors duration-300 hover:border-[#F8BF3C] hover:bg-[#F8BF3C] hover:text-[#2C3E50] md:inline-flex"
               >
-                <CalendarIcon />
+                <CalendarIcon/>
                 <span>Kostenlose Beratung buchen</span>
               </a>
             </div>
           </div>
         </div>
-
         <div className="relative flex w-full flex-col justify-center bg-[#133A7D] px-[20px] pb-[20px] pt-[50px] md:px-[50px] md:py-[100px] md:w-1/2 md:min-h-[35vw]">
           <div className="relative z-10 overflow-hidden rounded-[20px]">
             <iframe
-              id="ps-embed-690374c8806661003ce84273"
-              title="Invest4Kids Formular"
-              src="https://www.invest4kids-beratung.de/start?embed=1&amp;header=0&amp;footer=0&amp;cookieBanner=1&amp;autoHeight=1&amp;posthog_distinct_id=019cf4a2-e2a5-7dd5-b3e3-274f234a205d"
-              style={{ border: "0px", width: "100%", height: "396px" }}
+                id="ps-embed-690374c8806661003ce84273"
+                title="Invest4Kids Formular"
+                src="https://www.invest4kids-beratung.de/start?embed=1&amp;header=0&amp;footer=0&amp;cookieBanner=1&amp;autoHeight=1&amp;posthog_distinct_id=019cf4a2-e2a5-7dd5-b3e3-274f234a205d"
+                style={{border: "0px", width: "100%", height: "396px"}}
             />
           </div>
         </div>

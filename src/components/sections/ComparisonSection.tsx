@@ -40,8 +40,8 @@ export default function ComparisonSection() {
           </div>
 
           {/* Card 2 – Invest4Kids Konzept (main) */}
-          <div className="w-full overflow-hidden rounded-[10px] border-2 border-[#84B7CA4D] bg-[#FFFFFFB8] md:flex-1">
-            <div className="flex min-h-[110px] flex-col items-center justify-center gap-[12px] bg-[#84B7CA4D] px-[20px] py-[18px]">
+          <div className="w-full overflow-hidden rounded-[10px] border-2 border-[#84B7CA4D] bg-[linear-gradient(135deg,#F3FAFA,#FFFAEE)] md:flex-1">
+            <div className="flex min-h-[110px] flex-col items-center justify-center gap-[12px] bg-[#84B7CA4D] px-[20px] pt-[20px] pb-[26px]">
               <div className="flex h-[44px] w-[44px] items-center justify-center rounded-full bg-white">
                 <Star
                   className="h-[24px] w-[24px] text-[#133A7D]"

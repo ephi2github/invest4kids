@@ -75,9 +75,19 @@ const QuoteIcon = () => (
   </svg>
 );
 
-export default function TestimonialsSection() {
+type TestimonialsSectionProps = {
+  creamBackground?: boolean;
+};
+
+export default function TestimonialsSection({
+  creamBackground = false,
+}: TestimonialsSectionProps) {
   return (
-    <section className="bg-bg-light-blue px-5 py-12 md:px-[30px] md:py-[100px]">
+    <section
+      className={`px-5 py-12 md:px-[30px] md:py-[100px] ${
+        creamBackground ? "bg-bg-cream" : "bg-bg-light-blue"
+      }`}
+    >
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-4 flex justify-center">
           <div className="inline-flex w-fit items-center gap-[10px] rounded-full border border-[#F8BF3C] bg-[#FFFAEE] px-4 py-[5px]">
@@ -121,21 +131,21 @@ export default function TestimonialsSection() {
                 </video>
               </div>
 
-              <article className="rounded-[21px] bg-white px-6 py-6 shadow-[2px_8px_20px_0px_#0000000A]">
+              <article className="rounded-[21px] bg-white p-6 md:p-8.5 shadow-[2px_8px_20px_0px_#0000000A]">
                 <div className="mb-4 flex items-start gap-[14px]">
                   <span className="shrink-0 text-[#2C3E50]">
                     <QuoteIcon />
                   </span>
-                  <p className="w-full font-outfit text-[16px] font-light leading-[1.26] text-[#4B5563] md:text-[18px] md:leading-[23px]">
+                  <p className="w-full font-outfit text-[16px] font-light leading-[1.26] text-[#4B5563] md:text-[18px] md:leading-5.75">
                     {item.text}
                   </p>
                 </div>
 
-                <div className="flex items-center gap-[14px]">
-                  <div className="flex h-[38px] w-[38px] items-center justify-center rounded-full bg-[#4B5563] font-poppins text-[12px] font-normal leading-[22px] text-white lg:h-[42px] lg:w-[42px] lg:text-[14px] lg:leading-[21px]">
+                <div className="flex items-center gap-3.5">
+                  <div className="flex h-9.5 w-9.5 items-center justify-center rounded-full bg-[#4B5563] font-poppins text-[12px] font-normal leading-5.5 text-white lg:h-[42px] lg:w-[42px] lg:text-[14px] lg:leading-[21px]">
                     {item.initial}
                   </div>
-                  <div className="flex flex-col gap-[6px]">
+                  <div className="flex flex-col gap-1.5">
                     <p className="font-outfit text-[16px] font-medium leading-none text-[#2C3E50] md:text-[18px]">
                       {item.name}
                     </p>

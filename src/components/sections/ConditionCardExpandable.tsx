@@ -24,7 +24,7 @@ export default function ConditionCardExpandable({
 
   return (
     <article className="overflow-hidden rounded-[20px] border border-[#E4E4E7] bg-white shadow-[0_2px_8px_rgba(0,0,0,0.04)] transition-shadow duration-300 hover:shadow-[0_8px_24px_rgba(0,0,0,0.08)]">
-      <div className="flex flex-col gap-[16px] p-[24px] md:flex-row md:items-start md:gap-[12px] md:p-[30px]">
+      <div className="flex flex-col gap-[16px] p-[24px] md:flex-row md:items-start md:gap-[12px] md:p-[34px]">
         {/* Icon */}
         <div className="flex items-center gap-2.5">
           <div className="flex h-[66px] w-[66px] shrink-0 items-center justify-center rounded-[10px] bg-[#84B7CA4D]">

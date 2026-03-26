@@ -16,7 +16,7 @@ export default function Home() {
             <AdvantagesGrid/>
             <TeamCarousel/>
             <ProcessTimeline/>
-            <TestimonialsSection/>
+            <TestimonialsSection creamBackground />
             <CTABanner/>
             <MapVimeoSection />
             <KnownFromSection />

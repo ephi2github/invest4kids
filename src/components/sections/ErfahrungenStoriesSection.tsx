@@ -90,27 +90,27 @@ export default function ErfahrungenStoriesSection() {
     <section className="bg-white px-[20px] py-[45px] pb-[60px] sm:px-[24px] md:px-[30px] md:py-[100px]">
       <div className="mx-auto max-w-[1160px]">
         {/* heading */}
-        <div className="flex items-start gap-[16px] md:gap-[18px]">
+        <div className="flex items-start gap-[12px] pl-7.5">
           <img
             src={storyImage.src}
             alt="Story"
-            className="h-[62px] w-[62px] shrink-0 object-contain md:h-[76px] md:w-[76px]"
+            className="h-[62px] w-[62px] shrink-0 object-contain md:h-[66px] md:w-[66px]"
             draggable={false}
           />
 
           <div className="pt-[2px]">
-            <h2 className="text-left text-[27px] leading-[1.25] font-[800] text-[#2C3E50] sm:text-[30px] md:text-[34px]">
+            <h2 className="text-left text-[27px] leading-[1.25] font-[800] text-[#2C3E50] sm:text-[28px]">
               Unsere Stories
             </h2>
 
-            <p className="mt-[6px] text-left font-outfit text-[14px] leading-[23px] font-[300] text-[#4B5563] md:text-[18px]">
+            <p className="mt-1 text-left font-outfit text-[14px] leading-[23px] text-[#4B5563] md:text-[18px]">
               5 Familien berichten
             </p>
           </div>
         </div>
 
         {/* profile list */}
-        <div className="mt-[28px] flex flex-wrap justify-center gap-[40px] md:mt-[34px] md:flex-nowrap md:justify-around">
+        <div className="mt-[28px] mx-4 flex flex-wrap justify-center gap-[40px] md:mt-[45px] md:flex-nowrap md:justify-between">
           {stories.map((story, index) => (
             <button
               key={story.name}

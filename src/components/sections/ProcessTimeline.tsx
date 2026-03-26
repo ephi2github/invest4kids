@@ -94,9 +94,9 @@ export default function ProcessTimeline() {
                     So läuft deine kostenlose Investmentberatung mit Invest4Kids ab:
                 </p>
 
-                <div className="relative mt-[28px] sm:mt-[34px] md:mt-[56px] pt-12">
+                <div className="relative mt-[28px] sm:mt-[34px] md:mt-[56px] pt-12 md:pt-0">
                     {/* base line */}
-                    <div className="absolute top-0 bottom-0 left-[24px] w-[2px] bg-[#D8DDE3] md:left-1/2 md:-translate-x-1/2" />
+                    <div className="absolute top-0 bottom-0 left-[24px] w-[3px] bg-[#D8DDE3] md:left-1/2 md:-translate-x-1/2" />
 
                     {/* animated fill */}
                     <div
@@ -104,7 +104,7 @@ export default function ProcessTimeline() {
                         className="absolute top-0 left-[24px] w-[3px] bg-[#173F88] md:left-1/2 md:-translate-x-1/2"
                     />
 
-                    <div className="space-y-[22px] sm:space-y-[26px]">
+                    <div className="space-y-5.5 sm:space-b-[26px]">
                         {/* STEP 1 */}
                         <div
                             ref={(el) => {
@@ -117,7 +117,7 @@ export default function ProcessTimeline() {
                                     ref={(el) => {
                                         stepRefs.current[0] = el;
                                     }}
-                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#173F88] bg-white text-[16px] font-medium text-[#173F88]"
+                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#E4E4E7] text-[20px] font-medium text-[#173F88]"
                                 >
                                     01
                                 </div>
@@ -162,7 +162,7 @@ export default function ProcessTimeline() {
                                     ref={(el) => {
                                         stepRefs.current[1] = el;
                                     }}
-                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#173F88] bg-white text-[16px] font-medium text-[#173F88]"
+                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#E4E4E7] text-[20px] font-medium text-[#173F88]"
                                 >
                                     02
                                 </div>
@@ -207,7 +207,7 @@ export default function ProcessTimeline() {
                                     ref={(el) => {
                                         stepRefs.current[2] = el;
                                     }}
-                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full border border-[#173F88] bg-white text-[16px] font-medium text-[#173F88]"
+                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#E4E4E7] text-[20px] font-medium text-[#173F88]"
                                 >
                                     03
                                 </div>
@@ -221,7 +221,7 @@ export default function ProcessTimeline() {
                                         draggable={false}
                                         src={stepThreeImage}
                                         alt="Umsetzung"
-                                        className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[196px] md:w-[140px] md:shrink-0"
+                                        className="max-w-69.25 min-h-64.25 h-full w-full rounded-[10px] object-cover md:max-w-35 md:shrink-0"
                                     />
 
                                     <div className="mt-[14px] sm:mt-[16px] md:mt-0">
@@ -235,7 +235,7 @@ export default function ProcessTimeline() {
                                             einfach, unverbindlich und Schritt für Schritt begleitet.
                                         </p>
 
-                                        <button className="mt-[14px] hidden md:inline-flex h-[40px] min-w-[132px] items-center justify-center rounded-full border border-[#8EB8D1] bg-transparent px-[18px] text-[13px] font-semibold text-[#2E4259] transition-all duration-300 hover:border-[#173F88] hover:bg-[#173F88] hover:text-white sm:h-[42px] sm:min-w-[142px] sm:text-[14px] md:mt-[16px] md:h-[42px] md:min-w-[148px] md:px-[20px] md:text-[14px]">
+                                        <button className="mt-3.5 font-outfit hidden md:inline-flex h-10 min-w-33 items-center justify-center rounded-full border border-[#8EB8D1] bg-transparent text-[13px] font-medium text-[#2E4259] transition-all duration-600 hover:bg-bg-light-blue cursor-pointer sm:h-10.5 sm:min-w-35.5 sm:text-[18px] md:mt-4 md:h-12.5 md:px-9 md:py-3.75">
                                             Weitere Infos →
                                         </button>
                                     </div>

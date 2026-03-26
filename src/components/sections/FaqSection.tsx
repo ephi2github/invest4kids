@@ -27,7 +27,7 @@ const faqItems = [
 ] as const;
 
 export default function FaqSection() {
-  const [openIndex, setOpenIndex] = useState(0);
+  const [openIndex, setOpenIndex] = useState<null | number>(null);
 
   return (
     <section className="bg-[#FBFBFB]">
@@ -56,7 +56,7 @@ export default function FaqSection() {
                   type="button"
                   onClick={() => setOpenIndex(isOpen ? -1 : index)}
                   aria-expanded={isOpen}
-                  className="group flex min-h-[72px] w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left sm:px-8"
+                  className="group flex min-h-18 w-full cursor-pointer items-center justify-between gap-4 px-5 py-4 text-left sm:px-8"
                 >
                   <span
                     className={`font-poppins text-[18px] leading-[1.35] font-medium transition-colors duration-300 lg:text-[20px] ${
@@ -93,14 +93,14 @@ export default function FaqSection() {
           })}
         </div>
 
-        <div className="mx-auto mt-8 max-w-227.5 rounded-[10px] border border-border bg-white px-4 py-6 shadow-[0_10px_22px_rgba(44,62,80,0.06)] sm:px-8 sm:py-8">
+        <div className="mx-auto mt-8 max-w-227.5 rounded-[10px] border border-border bg-white px-4 py-6 sm:px-8 sm:py-8">
           <div className="flex flex-col items-center gap-6 text-center lg:flex-row lg:items-center lg:justify-between lg:text-left">
             <div className="flex flex-col items-center gap-5 lg:flex-row lg:items-center">
-              <div className="flex h-16.5 w-16.5 items-center justify-center rounded-xl bg-[rgba(225,247,236,0.88)] shadow-[0_14px_24px_rgba(44,62,80,0.08)] ring-1 ring-white/60 backdrop-blur-[2px] lg:h-17.5 lg:w-17.5">
+              <div className="flex h-16.5 w-16.5 items-center justify-center rounded-xl bg-[rgba(225,247,236,0.88)] shadow-[3px_12px_20px_rgba(0,0,0,0.13)] lg:h-17.5 lg:w-17.5">
                 <MessageCircle className="h-9 w-9 text-[#08E000]" strokeWidth={2} />
               </div>
               <div>
-                <h3 className="font-poppins text-[18px] leading-[1.35] font-bold tracking-[-0.02em] text-text-medium lg:text-[20px]">
+                <h3 className="font-poppins text-[18px] leading-[1.35] font-medium tracking-[-0.02em] text-text-medium lg:text-[20px]">
                   Deine Frage war nicht dabei?
                 </h3>
                 <p className="mt-2 font-outfit text-[16px] leading-[1.45] font-light text-[#4B5563] lg:text-[18px]">
@@ -111,7 +111,7 @@ export default function FaqSection() {
 
             <button
               type="button"
-              className="inline-flex h-10.5 w-full cursor-pointer items-center justify-center gap-2 rounded-full bg-[#08E000] px-6 py-2 font-outfit text-[16px] leading-none font-semibold text-text-medium transition-colors duration-300 hover:bg-[#1bf10f] sm:w-auto sm:min-w-[255px]"
+              className="inline-flex h-10.5 md:h-12 w-full cursor-pointer items-center justify-center gap-2 rounded-full shadow-[3px_12px_20px_rgba(0,0,0,0.13)] bg-[#08E000] px-6 py-2 font-outfit text-[16px] md:text-[18px] leading-none font-medium text-text-medium transition-colors duration-300 hover:bg-[#1bf10f] sm:w-auto sm:min-w-[255px]"
             >
               <MessageCircle className="h-4 w-4" strokeWidth={2} />
               <span>WhatsApp Chat starten</span>

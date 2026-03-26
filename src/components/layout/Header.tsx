@@ -289,7 +289,7 @@ export default function Header() {
                             <li key={child.href}>
                               <Link
                                 href={child.href}
-                                className="-mx-[6px] block rounded-[12px] px-[6px] py-[2px] transition-colors hover:bg-[#F3F6FA]"
+                                className="-mx-[6px] block rounded-[12px] px-[6px] py-[2px] transition-colors"
                               >
                                 <span className="flex items-center gap-[12px]">
                                   {child.icon && (

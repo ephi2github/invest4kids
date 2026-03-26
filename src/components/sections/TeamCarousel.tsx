@@ -90,9 +90,9 @@ export default function TeamCarousel() {
   return (
     <section className="bg-bg-cream">
       <div className="py-14 md:pt-25 md:pb-17.5 mx-auto w-full md:max-w-346.5">
-        <div className="md:mx-35.75 flex flex-col md:flex-row items-center justify-between px-5 gap-y-5">
-          <h2 className="text-center font-bold text-[27px] md:text-[28px] leading-[1.7]">
-            Dein Team hinter Invest4Kids
+        <div className="md:mx-35.75 flex flex-col md:flex-row items-center justify-between px-5 md:px-0 gap-y-5">
+          <h2 className="text-center font-extrabold text-[27px] md:text-[28px] leading-[1.7] text-text-medium">
+            Dein Invest4Kids Team
           </h2>
           <a
             href="/team"
@@ -103,7 +103,7 @@ export default function TeamCarousel() {
         
         </div>
 
-        <div className="overflow-x-hidden pt-20 z-10 pb-7.5 mt-8.5">
+        <div className="overflow-x-hidden pt-20 md:pt-15 z-10 pb-7.5 mt-8.5">
           <div
             className={`flex ease-in-out ${isIndexAdjusting ? "" : "transition-transform duration-500"}`}
             style={{
@@ -140,7 +140,7 @@ export default function TeamCarousel() {
               <path
                 d="M70 8H2M2 8L9 1.5M2 8L9 14.5"
                 stroke="currentColor"
-                strokeWidth="2.5"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
@@ -161,7 +161,7 @@ export default function TeamCarousel() {
               <path
                 d="M2 8H70M70 8L63 1.5M70 8L63 14.5"
                 stroke="currentColor"
-                strokeWidth="2.5"
+                strokeWidth="2"
                 strokeLinecap="round"
                 strokeLinejoin="round"
               />
