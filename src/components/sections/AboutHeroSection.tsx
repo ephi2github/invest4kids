@@ -1,4 +1,5 @@
 import Image from "next/image";
+import aboutHeroGroupPhoto from "@/assets/images/about/about-hero-group-photo.webp";
 import { Heart } from "lucide-react";
 
 export function AboutHeroSection() {
@@ -32,7 +33,7 @@ export function AboutHeroSection() {
 
         <div className="relative mx-auto w-full max-w-93 md:max-w-182 lg:max-w-none">
           <Image
-            src="https://invest4kids.de/wp-content/uploads/2025/12/Group-photo-1024x676.webp"
+            src={aboutHeroGroupPhoto}
             alt="The Invest4Kids team"
             width={530}
             height={350}

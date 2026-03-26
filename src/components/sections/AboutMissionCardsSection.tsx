@@ -1,12 +1,14 @@
 import Image from "next/image";
+import missionShieldImage from "@/assets/images/about/mission-shield.webp";
+import missionToolsImage from "@/assets/images/about/mission-tools.webp";
+import missionVisionImage from "@/assets/images/about/mission-vision.webp";
 
 const cards = [
   {
     title: "Our vision",
     description:
       "We believe that every child deserves a fair chance at a self-determined, secure future, regardless of their parents' income or prior knowledge.",
-    image:
-      "https://invest4kids.de/wp-content/uploads/2025/12/Illustration-eines-Kindes-mit-Stern-Symbol-fuer-die-Invest4Kids-Vision-einer-sicheren-Zukunft.webp",
+    image: missionVisionImage,
     imageAlt: "Illustration of child holding a star",
     imageBg: "bg-[#C9E8FF]",
   },
@@ -14,8 +16,7 @@ const cards = [
     title: "Our mission",
     description:
       "Our mission is to provide parents with the best tools, the necessary knowledge, and the right strategy to take early precautions.",
-    image:
-      "https://invest4kids.de/wp-content/uploads/2025/12/Grafik-mit-Zahnraedern-Buch-und-Gluehbirne-stellvertretend-fuer-die-Invest4Kids-Mission-Finanzwissen-zu-vermitteln.webp",
+    image: missionToolsImage,
     imageAlt: "Illustration of gear, lightbulb, and book",
     imageBg: "bg-[#F9EAB5]",
   },
@@ -23,8 +24,7 @@ const cards = [
     title: "More than just a financial product",
     description:
       "We raise awareness, support decision-making, and empower families with knowledge that lasts.",
-    image:
-      "https://invest4kids.de/wp-content/uploads/2025/12/Illustration-eines-Schutzschildes-Symbol-fuer-Invest4Kids-Finanzprodukte-und-Sicherheit-fuer-Familien.webp",
+    image: missionShieldImage,
     imageAlt: "Illustration of shield and stars",
     imageBg: "bg-[#D6E7F8]",
   },

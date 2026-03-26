@@ -3,6 +3,10 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import flagDe from "@/assets/images/header/flag-de.svg";
+import flagGb from "@/assets/images/header/flag-gb.svg";
+import headerLogo from "@/assets/images/header/invest4kids-logo.png";
+import headerLogoMobile from "@/assets/images/header/invest4kids-logo-mobile.png";
 import Container from "./Container";
 
 type NavItem = {
@@ -227,12 +231,11 @@ export default function Header() {
         <div className="hidden h-30 items-center py-8.75 lg:flex ">
           <Link href="/" className="shrink-0">
             <Image
-              src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2024/10/Invest-4-kids-logo.png"
+              src={headerLogo}
               alt="Invest4Kids"
               width={130}
               height={82}
               className="h-11.25 w-auto"
-              unoptimized
               priority
             />
           </Link>
@@ -340,20 +343,18 @@ export default function Header() {
 
             <div className="flex items-center gap-2">
               <Image
-                src="https://cdn.weglot.com/flags/rectangle_mat/de.svg"
+                src={flagDe}
                 width={24}
                 height={16}
                 alt="Deutsch"
                 className="cursor-pointer py-1.5 mr-1 border-b border-primary/40"
-                unoptimized
               />
               <Image
-                src="https://cdn.weglot.com/flags/rectangle_mat/gb.svg"
+                src={flagGb}
                 width={24}
                 height={16}
                 alt="English"
                 className="cursor-pointer opacity-50 transition-opacity hover:opacity-100"
-                unoptimized
               />
             </div>
           </div>
@@ -362,12 +363,11 @@ export default function Header() {
         <div className="flex h-[96px]  items-center justify-between lg:hidden">
           <Link href="/" className="shrink-0">
             <Image
-              src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-7e77c36/invest4kids.de/wp-content/uploads/2024/10/Invest-4-kids-logo-2048x1295.png"
+              src={headerLogoMobile}
               alt="Invest4Kids"
               width={1000}
               height={1000}
               className="h-11 w-auto"
-              unoptimized
               priority
             />
           </Link>
@@ -547,20 +547,18 @@ export default function Header() {
               {/* Language Switcher */}
               <div className="mt-4 flex items-center justify-center gap-3">
                 <Image
-                  src="https://cdn.weglot.com/flags/rectangle_mat/de.svg"
+                  src={flagDe}
                   width={28}
                   height={20}
                   alt="Deutsch"
                   className="cursor-pointer rounded-sm border border-primary/30"
-                  unoptimized
                 />
                 <Image
-                  src="https://cdn.weglot.com/flags/rectangle_mat/gb.svg"
+                  src={flagGb}
                   width={28}
                   height={20}
                   alt="English"
                   className="cursor-pointer rounded-sm opacity-60 transition-opacity hover:opacity-100"
-                  unoptimized
                 />
               </div>
             </div>

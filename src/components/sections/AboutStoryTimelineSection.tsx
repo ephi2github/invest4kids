@@ -1,4 +1,5 @@
 import Image from "next/image";
+import bogdanJakuschenko from "@/assets/images/about/bogdan-jakuschenko.webp";
 import {
   ArrowUp,
   Building2,
@@ -214,7 +215,7 @@ export function AboutStoryTimelineSection() {
             <div className="w-full overflow-hidden rounded-[20px] border border-primary-light md:w-[362px] md:shrink-0">
               <div className="relative aspect-340/228 md:aspect-360/249">
                 <Image
-                  src="https://invest4kids.de/wp-content/uploads/2025/12/Bogdan-Jakuschenko.webp"
+                  src={bogdanJakuschenko}
                   alt="Bogdan Jakuschenko, founder of Invest4Kids"
                   fill
                   sizes="(min-width: 768px) 362px, 100vw"

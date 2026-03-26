@@ -1,33 +1,38 @@
 import Image from "next/image";
+import bildLogo from "@/assets/images/home/known-from/bild.png";
+import businessInsiderLogo from "@/assets/images/home/known-from/business-insider.png";
+import forbesLogo from "@/assets/images/home/known-from/forbes.png";
+import sternLogo from "@/assets/images/home/known-from/stern.png";
+import weltLogo from "@/assets/images/home/known-from/welt.png";
 
 const logos = [
   {
     alt: "Forbes logo",
-    src: "https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2024/10/logo-8.png",
+    src: forbesLogo,
     width: 64,
     height: 64,
   },
   {
     alt: "Business Insider logo",
-    src: "https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2024/11/Design-ohne-Titel.png",
+    src: businessInsiderLogo,
     width: 56,
     height: 56,
   },
   {
     alt: "Stern logo",
-    src: "https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2024/11/unnamed677.png",
+    src: sternLogo,
     width: 128,
     height: 128,
   },
   {
     alt: "WELT logo",
-    src: "https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2024/11/2-1.png",
+    src: weltLogo,
     width: 96,
     height: 129,
   },
   {
     alt: "BILD logo",
-    src: "https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2024/11/1-1.png",
+    src: bildLogo,
     width: 96,
     height: 129,
   },

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import teamHeroImage from "@/assets/images/team/team-hero.webp";
 
 export function TeamHeroSection() {
   return (
@@ -6,7 +7,7 @@ export function TeamHeroSection() {
       <div className="mx-auto w-full max-w-275">
         <div className="relative">
           <Image
-            src="https://invest4kids.de/wp-content/uploads/2025/12/team.webp"
+            src={teamHeroImage}
             alt="Group photo of the Invest4Kids team, which supports parents with financial advice"
             width={2200}
             height={866}

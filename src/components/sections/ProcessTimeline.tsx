@@ -4,6 +4,9 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Image from "next/image";
+import stepOneImage from "@/assets/images/home/timeline/step-1.webp";
+import stepTwoImage from "@/assets/images/home/timeline/step-2.webp";
+import stepThreeImage from "@/assets/images/home/timeline/step-3.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -127,7 +130,7 @@ export default function ProcessTimeline() {
                                     <Image
                                         width={1000}
                                         height={1000}
-                                        src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/05/schritt1.jpg.webp"
+                                        src={stepOneImage}
                                         alt="Telefonisches Kennenlernen"
                                         className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[196px] md:w-[140px] md:shrink-0"
                                     />
@@ -172,7 +175,7 @@ export default function ProcessTimeline() {
                                     <Image
                                         width={1000}
                                         height={1000}
-                                        src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/11/39f75824eb1596920c7efd85ee608ac85cf3c2f3.png.webp"
+                                        src={stepTwoImage}
                                         alt="Beratungsgespräch"
                                         className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[200px] md:w-[140px] md:shrink-0"
                                     />
@@ -214,9 +217,9 @@ export default function ProcessTimeline() {
                                 <div className="md:flex md:items-start md:gap-8">
                                     <Image
                                         width={1000}
-                                        height={1000}                                        draggable={false}
-
-                                        src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/11/1a9339cf4c2930497bc3e8c7f92ad45a43648574.png.webp"
+                                        height={1000}
+                                        draggable={false}
+                                        src={stepThreeImage}
                                         alt="Umsetzung"
                                         className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[196px] md:w-[140px] md:shrink-0"
                                     />

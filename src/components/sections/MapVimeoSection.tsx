@@ -1,3 +1,5 @@
+import footerMap from "@/assets/images/home/map/footer-map.png";
+
 export default function MapVimeoSection() {
   const renderVideo = () => (
     <div className="overflow-hidden rounded-[20px]">
@@ -19,8 +21,7 @@ export default function MapVimeoSection() {
       <section
           className="bg-[#FBFBFB] bg-[position:top_left] bg-cover bg-no-repeat px-5 py-[50px] md:bg-auto md:bg-[position:bottom_center] md:bg-repeat md:px-0 md:py-[100px]"
           style={{
-            backgroundImage:
-                "url('https://invest4kids.de/wp-content/uploads/2026/02/Footer-with-a-map-scaled.png')",
+            backgroundImage: `url(${footerMap.src})`,
       }}
     >
       <div className="mx-auto flex max-w-[1100px] flex-col items-center justify-center gap-0 md:flex-row md:items-center md:gap-12">

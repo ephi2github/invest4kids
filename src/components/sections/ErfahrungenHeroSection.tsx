@@ -87,11 +87,11 @@ type Pin = {
 };
 
 const pins: Pin[] = [
-  { city: "Hannover", top: "32%", left: "59%" },
   { city: "Hamburg", top: "21%", left: "54%" },
   { city: "Berlin", top: "23%", left: "83%" },
   { city: "Leipzig", top: "34%", left: "80%" },
   { city: "Düsseldorf", top: "43%", left: "28%" },
+  { city: "Hannover", top: "32%", left: "59%" },
   { city: "Dresden", top: "42%", left: "92%" },
   { city: "Frankfurt", top: "61%", left: "55%" },
   { city: "Köln", top: "70%", left: "39%" },
@@ -107,63 +107,42 @@ function MapPin({ city, top, left, index }: Pin & { index: number }) {
         {
           top,
           left,
-          "--pin-delay": `${index * 80}ms`,
         } as CSSProperties
       }
     >
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute top-0 left-0 z-0 h-[28px] w-[28px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[rgba(86,128,194,0.4)] blur-[1px] animate-mapPinHalo sm:h-[30px] sm:w-[30px] md:h-[32px] md:w-[32px]"
-      />
-
-      <span
-        aria-hidden="true"
-        className="pointer-events-none absolute top-0 left-0 z-[1] h-[28px] w-[28px] -translate-x-1/2 -translate-y-1/2 rounded-full border border-[rgba(86,128,194,0.8)] animate-mapPinBeam sm:h-[30px] sm:w-[30px] md:h-[32px] md:w-[32px]"
-      />
-
       <div
-        className="group absolute top-0 left-0 z-[2] -translate-x-1/2 -translate-y-1/2 cursor-pointer"
+        className="group absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 cursor-pointer"
         aria-label={city}
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="25"
-          height="25"
-          viewBox="0 0 25 25"
-          fill="none"
-          className="h-[20px] w-[20px] sm:h-[22px] sm:w-[22px] md:h-[24px] md:w-[24px] drop-shadow-[0_4px_10px_rgba(19,58,125,0.2)]"
-          aria-hidden="true"
-        >
-          <rect x="1" y="1" width="23" height="23" rx="11.5" fill="url(#pg)" />
-          <rect
-            x="1"
-            y="1"
-            width="23"
-            height="23"
-            rx="11.5"
-            stroke="white"
-            strokeWidth="2"
-          />
-          <path
-            d="M17.1412 10.6429C17.1412 13.2071 14.8198 16.4001 12.4984 19.0001C10.2698 16.4001 7.85547 13.2071 7.85547 10.6429C7.85547 8.07869 9.93416 6 12.4984 6C15.0626 6 17.1412 8.07869 17.1412 10.6429Z"
-            fill="white"
-          />
-          <defs>
-            <linearGradient
-              id="pg"
-              x1="0"
-              y1="0"
-              x2="1"
-              y2="1"
-              gradientUnits="objectBoundingBox"
-            >
-              <stop stopColor="#84B7CA" />
-              <stop offset="1" stopColor="#133A7D" />
-            </linearGradient>
-          </defs>
-        </svg>
+        <div className="relative h-[20px] w-[20px] sm:h-[22px] sm:w-[22px] md:h-[24px] md:w-[24px]">
+          <span className="pointer-events-none absolute inset-0 rounded-full bg-primary/80 animate-ping [animation-duration:1000ms]" />
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            viewBox="0 0 25 25"
+            fill="none"
+            className="relative z-10 h-full w-full drop-shadow-[0_4px_10px_rgba(19,58,125,0.2)] fill-primary group-hover:scale-125 transition-transform ease-in-out duration-400"
+            aria-hidden="true"
+          >
+            <rect x="1" y="1" width="23" height="23" rx="11.5" fill="url(#pg)" />
+            <rect
+              x="1"
+              y="1"
+              width="23"
+              height="23"
+              rx="11.5"
+              stroke="white"
+              strokeWidth="2"
+            />
+            <path
+              d="M17.1412 10.6429C17.1412 13.2071 14.8198 16.4001 12.4984 19.0001C10.2698 16.4001 7.85547 13.2071 7.85547 10.6429C7.85547 8.07869 9.93416 6 12.4984 6C15.0626 6 17.1412 8.07869 17.1412 10.6429Z"
+              fill="white"
+            />
+          </svg>
+        </div>
 
-        <span className="pointer-events-none absolute left-1/2 top-[-34px] -translate-x-1/2 translate-y-[4px] whitespace-nowrap rounded-full bg-[#2C3E50] px-[10px] py-[7px] text-[12px] leading-none text-white opacity-0 shadow-[0_6px_18px_rgba(0,0,0,0.18)] transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100">
+        <span className="pointer-events-none z-99 absolute left-1/2 -top-8.5 -translate-x-1/2 translate-y-1 whitespace-nowrap rounded-full bg-[#2C3E50] px-[10px] py-[7px] text-[12px] leading-none text-white opacity-0 shadow-[0_6px_18px_rgba(0,0,0,0.18)] transition-all duration-200 group-hover:translate-y-0 group-hover:opacity-100">
           {city}
         </span>
       </div>
@@ -274,9 +253,11 @@ export default function ErfahrungenHeroSection() {
               draggable={false}
             />
 
-            {pins.map((pin, index) => (
-              <MapPin key={pin.city} {...pin} index={index} />
-            ))}
+            <div className={'w-[90%] h-11/12 absolute top-4 left-1/2 transform -translate-x-1/2 mx-auto'}>
+              {pins.map((pin, index) => (
+                  <MapPin key={pin.city} {...pin} index={index} />
+              ))}
+            </div>
           </div>
         </div>
       </div>

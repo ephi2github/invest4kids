@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import googleGLogo from "@/assets/images/team/google-g-logo.png";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 type Review = {
@@ -182,7 +183,7 @@ export function TeamReviewsSection() {
                     </div>
 
                     <Image
-                      src="https://www.gstatic.com/images/branding/product/1x/googleg_32dp.png"
+                      src={googleGLogo}
                       alt="Google image"
                       width={20}
                       height={20}

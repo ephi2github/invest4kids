@@ -1,14 +1,28 @@
 "use client";
 
 import { useState, useCallback, useEffect } from "react";
-import Image from "next/image";
-
-const CDN_BASE =
-  "https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/11/";
+import Image, { type StaticImageData } from "next/image";
+import alexanderMinKim from "@/assets/images/home/team/alexander-min-kim.webp";
+import bastianWeise from "@/assets/images/home/team/bastian-weise.webp";
+import bogdanJakuschenko from "@/assets/images/home/team/bogdan-jakuschenko.webp";
+import felixKleinhenz from "@/assets/images/home/team/felix-kleinhenz.webp";
+import finnDiestel from "@/assets/images/home/team/finn-diestel.webp";
+import gloryMayasi from "@/assets/images/home/team/glory-mayasi.webp";
+import janoschEisenbart from "@/assets/images/home/team/janosch-eisenbart.webp";
+import jeromeJoseph from "@/assets/images/home/team/jerome-joseph.webp";
+import lailaMoor from "@/assets/images/home/team/laila-moor.webp";
+import mallikGodjeIssa from "@/assets/images/home/team/mallik-godje-issa.webp";
+import patrickMakaryk from "@/assets/images/home/team/patrick-makaryk.webp";
+import sofiaLasovskaja from "@/assets/images/home/team/sofia-lasovskaja.webp";
+import susannaSchmitz from "@/assets/images/home/team/susanna-schmitz.webp";
+import tillJohanDeraneck from "@/assets/images/home/team/till-johan-deraneck.webp";
+import timRuser from "@/assets/images/home/team/tim-ruser.webp";
+import tonyKotala from "@/assets/images/home/team/tony-kotala.webp";
+import torbenKratzke from "@/assets/images/home/team/torben-kratzke.webp";
 
 type TeamMember = {
   name: string;
-  image: string;
+  image: StaticImageData;
   subtitle: string;
   quote: string;
 };
@@ -22,23 +36,23 @@ const categories: Category[] = [
   {
     label: "Consultants",
     members: [
-      { name: "Bogdan", image: "Bogdan-Jakuschenko-Gruender-von-Invest4kids.webp", subtitle: "Founder of Invest4Kids", quote: "My goal: to help 1 million parents make better financial decisions for their children." },
-      { name: "Torben", image: "Torben-Kratzke-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "I want to create long-term financial security and stability for children." },
-      { name: "Alex", image: "Alexander-Min-Kim-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "We are role models for our kids—that's why it's important to set a good example." },
-      { name: "Susanna", image: "Susanna-Schmitz-Expertin-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "The future is uncertain—a plan provides security to reliably support children." },
-      { name: "Laila", image: "Laila-Moor-Expertin-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "My goal: to support and empower 1,000 families on their path to financial freedom." },
-      { name: "Tony", image: "Tony-Kotala-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "I want all children to have the best opportunities for a successful, carefree future." },
-      { name: "Janosch", image: "Janosch-Eisenbart-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "My goal: to give children financial security and enable them to have a future without hardship." },
-      { name: "Till", image: "Till-Johan-Deraneck-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "I want to give children an easy start in life—without student loans, for example." },
-      { name: "Tim", image: "Tim-Ruser-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "My goal: to help parents give their children a future free from worries and fears." },
-      { name: "Mallik", image: "Mallik-Godje-Issa-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "Investments are crucial to securing a sustainable future for our children." },
-      { name: "Glory", image: "Glory-Mayasi-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "It's about giving children the foundations for financial stability and security at an early age." },
-      { name: "Finn", image: "Finn-Diestel-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "My vision: to make finances more transparent and thus make it easier to get started." },
-      { name: "Sofia", image: "Sofia-Lasovskaja-Expertin-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "I learned early on from my mother how important financial awareness is for children." },
-      { name: "Bastian", image: "Bastian-Weise-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "Together, we are laying the foundation for a secure and carefree future for our children." },
-      { name: "Jerome", image: "Jerome-Joseph-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "My mission: to give children access to education and dreams—without financial restrictions." },
-      { name: "Patrick", image: "Patrick-Makaryk-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "I want to give children a carefree start in life so that they can pursue their heart's desires." },
-      { name: "Felix", image: "Felix-Kleinhenz-Experte-fuer-Kinderinvestments.webp", subtitle: "Expert for children's investments", quote: "Those who invest today open doors for their children that often remained closed to them." },
+      { name: "Bogdan", image: bogdanJakuschenko, subtitle: "Founder of Invest4Kids", quote: "My goal: to help 1 million parents make better financial decisions for their children." },
+      { name: "Torben", image: torbenKratzke, subtitle: "Expert for children's investments", quote: "I want to create long-term financial security and stability for children." },
+      { name: "Alex", image: alexanderMinKim, subtitle: "Expert for children's investments", quote: "We are role models for our kids-that's why it's important to set a good example." },
+      { name: "Susanna", image: susannaSchmitz, subtitle: "Expert for children's investments", quote: "The future is uncertain-a plan provides security to reliably support children." },
+      { name: "Laila", image: lailaMoor, subtitle: "Expert for children's investments", quote: "My goal: to support and empower 1,000 families on their path to financial freedom." },
+      { name: "Tony", image: tonyKotala, subtitle: "Expert for children's investments", quote: "I want all children to have the best opportunities for a successful, carefree future." },
+      { name: "Janosch", image: janoschEisenbart, subtitle: "Expert for children's investments", quote: "My goal: to give children financial security and enable them to have a future without hardship." },
+      { name: "Till", image: tillJohanDeraneck, subtitle: "Expert for children's investments", quote: "I want to give children an easy start in life-without student loans, for example." },
+      { name: "Tim", image: timRuser, subtitle: "Expert for children's investments", quote: "My goal: to help parents give their children a future free from worries and fears." },
+      { name: "Mallik", image: mallikGodjeIssa, subtitle: "Expert for children's investments", quote: "Investments are crucial to securing a sustainable future for our children." },
+      { name: "Glory", image: gloryMayasi, subtitle: "Expert for children's investments", quote: "It's about giving children the foundations for financial stability and security at an early age." },
+      { name: "Finn", image: finnDiestel, subtitle: "Expert for children's investments", quote: "My vision: to make finances more transparent and thus make it easier to get started." },
+      { name: "Sofia", image: sofiaLasovskaja, subtitle: "Expert for children's investments", quote: "I learned early on from my mother how important financial awareness is for children." },
+      { name: "Bastian", image: bastianWeise, subtitle: "Expert for children's investments", quote: "Together, we are laying the foundation for a secure and carefree future for our children." },
+      { name: "Jerome", image: jeromeJoseph, subtitle: "Expert for children's investments", quote: "My mission: to give children access to education and dreams-without financial restrictions." },
+      { name: "Patrick", image: patrickMakaryk, subtitle: "Expert for children's investments", quote: "I want to give children a carefree start in life so that they can pursue their heart's desires." },
+      { name: "Felix", image: felixKleinhenz, subtitle: "Expert for children's investments", quote: "Those who invest today open doors for their children that often remained closed to them." },
     ],
   },
   { label: "Telephone operators", members: [] },
@@ -170,11 +184,10 @@ export function TeamTabsCarouselSection() {
                     {/* Image — extends above the white card */}
                     <div className="relative z-10 h-[334px] w-full">
                       <Image
-                        src={`${CDN_BASE}${member.image}`}
+                        src={member.image}
                         alt={`${member.name}, ${member.subtitle}`}
                         width={464}
                         height={668}
-                        unoptimized
                         className="h-[334px] w-full object-contain object-bottom"
                       />
                       {/* White fade at the bottom of the image */}

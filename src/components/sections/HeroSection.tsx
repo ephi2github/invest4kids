@@ -1,28 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
+import dmsStatsImage from "@/assets/images/home/hero/dms-stats-images.webp";
+import groupPhoto from "@/assets/images/home/hero/group-photo.webp";
 import Container from "../layout/Container";
-
-const CDN_BASE =
-  "https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/";
-
-const avatarMembers = [
-  {
-    name: "Patrick",
-    src: `${CDN_BASE}2025/11/Patrick-Makaryk-Experte-fuer-Kinderinvestments.webp`,
-  },
-  {
-    name: "Laila",
-    src: `${CDN_BASE}2025/11/Laila-Moor-Expertin-fuer-Kinderinvestments.webp`,
-  },
-  {
-    name: "Felix",
-    src: `${CDN_BASE}2025/11/Felix-Kleinhenz-Experte-fuer-Kinderinvestments.webp`,
-  },
-  {
-    name: "Susanna",
-    src: `${CDN_BASE}2025/11/Susanna-Schmitz-Expertin-fuer-Kinderinvestments.webp`,
-  },
-];
 
 export default function HeroSection() {
   return (
@@ -83,14 +63,13 @@ export default function HeroSection() {
             <div className="flex items-center justify-center md:justify-start gap-3">
               <div className="flex -space-x-2.5">
                 <Image
-                    src={`https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/11/DMs-Stats-Images.webp`}
-                    alt={'5200+ Eltern vertrauen uns'}
-                    width={23}
-                    height={23}
-                    className="h-5.75 w-full"
-                    unoptimized
-                    priority
-                  />
+                  src={dmsStatsImage}
+                  alt="5200+ Eltern vertrauen uns"
+                  width={23}
+                  height={23}
+                  className="h-5.75 w-full"
+                  priority
+                />
               </div>
               <p className="text-[16px] md:text-[18px] text-text-muted font-outfit">
                 5200+ Eltern vertrauen uns
@@ -113,7 +92,7 @@ export default function HeroSection() {
             {/* Photo */}
             <div className="relative z-10 bg-transparent md:mt-9 ">
               <Image
-                src={`${CDN_BASE}2025/12/Group-photo.webp`}
+                src={groupPhoto}
                 alt="Das Invest4Kids Team"
                 width={1000}
                 height={1000}

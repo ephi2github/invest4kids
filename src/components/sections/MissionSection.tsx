@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import teamPortrait from "@/assets/images/home/mission/team-portrait.webp";
 import { Eye, Target } from "lucide-react";
 import React from "react";
 
@@ -25,7 +26,7 @@ export default function MissionSection() {
             {/* Intro visual */}
             <div className="relative order-last mx-auto overflow-hidden rounded-3xl bg-bg-light-blue md:h-72.75 md:w-93.25 lg:order-first lg:h-72.75 lg:w-89 lg:max-w-none">
               <Image
-                src="https://cdn-ilcgkon.nitrocdn.com/nagGuCyZytyRpkwQIcHQTdSzWgxfpvWP/assets/images/optimized/rev-96f7e66/invest4kids.de/wp-content/uploads/2025/11/image.png.webp"
+                src={teamPortrait}
                 alt="Invest4Kids team portrait"
                 width={1024}
                 height={788}

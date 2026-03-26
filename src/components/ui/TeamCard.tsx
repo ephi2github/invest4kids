@@ -1,8 +1,8 @@
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 interface TeamCardProps {
   name: string;
-  imageUrl: string;
+  imageUrl: StaticImageData;
   subtitle: string;
   isCenter?: boolean;
 }
@@ -28,7 +28,6 @@ export default function TeamCard({
             alt={name}
             width={464}
             height={668}
-            unoptimized
             className="h-full w-full object-contain object-top"
           />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[46%] bg-linear-to-t from-white via-white/85 to-transparent" />
