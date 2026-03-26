@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import { notFound } from "next/navigation"
 
@@ -25,7 +26,7 @@ function renderBlock(block: ContentBlock, index: number) {
     case "image":
       return (
         <div key={index} className="flex flex-col items-center">
-          <img src={block.src} alt={block.alt ?? ""} className={`h-auto w-full rounded-[10px] ${block.width ?? "max-w-[640px]"} object-contain`} draggable={false} />
+          <Image src={block.src} alt={block.alt ?? ""} className={`h-auto w-full rounded-[10px] ${block.width ?? "max-w-[640px]"} object-contain`} width={1000} height={1000} draggable={false} />
           {block.caption ? <p className="mt-[10px] text-center text-[15px] italic leading-[1.5] text-[#6C757E]">{block.caption}</p> : null}
         </div>
       )
@@ -64,7 +65,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         <section className="mb-[22px] rounded-[10px] bg-white px-[22px] py-[18px] md:px-[34px] md:py-[34px]">
           <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[14px] text-[#1E293B] font-outfit mb-[24px]">
             <div className="flex items-center gap-[10px] font-outfit">
-              <img src={post.author.image} alt={post.author.name} className="h-[42px] md:h-[50px] aspect-square rounded-full object-cover" draggable={false} />
+              <Image src={post.author.image} alt={post.author.name} className="h-[42px] md:h-[50px] aspect-square rounded-full object-cover" width={1000} height={1000} draggable={false} />
               <div className="text-[16px] md:text-[18px] leading-[1.25] text-[#4B5563]">
                 <p className="text-text-dark pb-1">Author:</p>
                 <p className="text-[#4B5563]">{post.author.name}</p>
@@ -193,7 +194,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <section className="md:hidden mb-[22px] rounded-[10px] bg-white px-[22px] py-[18px] md:px-[34px] md:py-[34px]">
             <div className="flex flex-wrap items-center gap-x-[30px] gap-y-[14px] text-[#1E293B] font-outfit mb-[24px]">
               <div className="flex items-center gap-[10px] font-outfit">
-                <img src={post.author.image} alt={post.author.name} className="h-[42px] md:h-[50px] aspect-square rounded-full object-cover" draggable={false} />
+                <Image src={post.author.image} alt={post.author.name} className="h-[42px] md:h-[50px] aspect-square rounded-full object-cover" width={1000} height={1000} draggable={false} />
                 <div className="text-[16px] md:text-[18px] leading-[1.25] text-[#4B5563]">
                   <p className="text-text-dark pb-1">Author:</p>
                   <p className="text-[#6C757E]">{post.author.name}</p>

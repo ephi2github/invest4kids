@@ -1,3 +1,4 @@
+import Image from "next/image";
 import konzeptRad from "@/assets/images/konzept/konzept-rad.png";
 
 export default function KonzeptHeroSection() {
@@ -33,12 +34,12 @@ export default function KonzeptHeroSection() {
           </div>
 
           <div className="flex w-full justify-center md:w-auto md:justify-end">
-            <img
+            <Image
               src={konzeptRad.src}
               alt="Invest4Kids Konzept – Vorteile wie Steuerfreiheit, elterliche Kontrolle und Flexibilität"
               className="h-auto min-w-[280px] w-full shrink-0 object-contain lg:w-[538px] lg:max-w-[538px]"
-              width={800}
-              height={800}
+              width={1000}
+              height={1000}
               draggable={false}
             />
           </div>

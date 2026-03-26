@@ -1,3 +1,4 @@
+import Image from "next/image";
 import dmsStatsImages from "@/assets/images/home/hero/dms-stats-images.webp";
 import dynamicIsland from "@/assets/images/erfahrungen/dynamic-island.webp";
 import message1Avatar from "@/assets/images/erfahrungen/message-1.webp";
@@ -61,10 +62,12 @@ export default function ErfahrungenDMsSection() {
             <div className="mt-[14px] h-[3px] w-[96px] bg-[#84B7CA] md:mt-[16px]" />
 
             <div className="mt-[14px] flex items-center gap-[12px] md:mt-[16px]">
-              <img
+              <Image
                 src={dmsStatsImages.src}
                 alt="people"
                 className="h-auto w-[94px] object-contain md:w-[112px]"
+                width={1000}
+                height={1000}
                 draggable={false}
               />
               <p className="font-outfit text-[15px] leading-[23px] font-[300] text-[#4B5563] sm:text-[16px] md:text-[18px]">
@@ -91,19 +94,23 @@ export default function ErfahrungenDMsSection() {
           <div className="flex justify-center lg:order-2 lg:justify-end px-5">
             <div className="relative w-full sm:w-[330px] md:w-[350px]" style={{ aspectRatio: "1.01/2.07" }}>
               {/* phone shell */}
-              <img
+              <Image
                 src={phoneImage.src}
                 alt="Phone frame"
                 className="relative z-[5] h-auto w-full object-contain select-none"
+                width={1000}
+                height={1000}
                 draggable={false}
               />
 
               {/* dynamic island */}
-              <img
+              <Image
                 src={dynamicIsland.src}
                 alt=""
                 aria-hidden="true"
                 className="absolute left-1/2 top-[30px] z-[8] w-[122px] -translate-x-1/2 object-contain"
+                width={1000}
+                height={1000}
                 draggable={false}
               />
 
@@ -166,10 +173,12 @@ export default function ErfahrungenDMsSection() {
                         key={message.id}
                         className="flex items-end gap-[8px] sm:gap-[9px]"
                       >
-                        <img
+                        <Image
                           src={message.avatar}
                           alt={message.alt}
                           className="mb-[8px] h-[34px] w-[34px] shrink-0 rounded-full object-cover sm:h-[38px] sm:w-[38px] md:h-[40px] md:w-[40px]"
+                          width={1000}
+                          height={1000}
                           draggable={false}
                         />
 

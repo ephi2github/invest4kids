@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useState } from "react";
 import lauraImage from "@/assets/images/erfahrungen/laura.webp";
 import margotImage from "@/assets/images/erfahrungen/margot.webp";
@@ -91,10 +92,12 @@ export default function ErfahrungenStoriesSection() {
       <div className="mx-auto max-w-[1160px]">
         {/* heading */}
         <div className="flex items-start gap-[12px] pl-7.5">
-          <img
+          <Image
             src={storyImage.src}
             alt="Story"
             className="h-[62px] w-[62px] shrink-0 object-contain md:h-[66px] md:w-[66px]"
+            width={1000}
+            height={1000}
             draggable={false}
           />
 
@@ -125,10 +128,12 @@ export default function ErfahrungenStoriesSection() {
                   style={{ background: "linear-gradient(45.3deg, #F8BF3C -0.26%, #84B7CA 100.26%)" }}
                 >
                   <div className="h-full w-full overflow-hidden rounded-full bg-white p-1">
-                    <img
+                    <Image
                       src={story.image}
                       alt={story.name}
                       className="h-full w-full object-cover"
+                      width={1000}
+                      height={1000}
                       draggable={false}
                     />
                   </div>
@@ -257,10 +262,12 @@ export default function ErfahrungenStoriesSection() {
 
               {/* header overlay */}
               <div className="pointer-events-none absolute left-[18px] top-[46px] z-20 flex items-center gap-[12px]">
-                <img
+                <Image
                   src={activeStory.image}
                   alt={activeStory.name}
                   className="h-[56px] w-[56px] rounded-full object-cover ring-2 ring-white/20"
+                  width={1000}
+                  height={1000}
                   draggable={false}
                 />
 

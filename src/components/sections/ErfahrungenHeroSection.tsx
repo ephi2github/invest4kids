@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
 import mapBlur from "@/assets/images/erfahrungen/map-blur.webp";
@@ -100,7 +101,7 @@ const pins: Pin[] = [
   { city: "München", top: "88%", left: "76%" },
 ];
 
-function MapPin({ city, top, left, index }: Pin & { index: number }) {
+function MapPin({ city, top, left }: Pin & { index: number }) {
   return (
     <div
       className="absolute isolate"
@@ -247,10 +248,12 @@ export default function ErfahrungenHeroSection() {
         {/* RIGHT MAP */}
         <div className="flex justify-center lg:justify-end">
           <div className="relative w-full max-w-[260px] sm:max-w-[290px] md:max-w-[313px]">
-            <img
+            <Image
               src={mapBlur.src}
               alt="map"
               className="h-auto w-full object-contain"
+              width={1000}
+              height={1000}
               draggable={false}
             />
 

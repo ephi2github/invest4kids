@@ -1,3 +1,4 @@
+import Image from "next/image";
 import aboutHeroGroupPhoto from "@/assets/images/about/about-hero-group-photo.webp";
 
 export default function ErfahrungenCtaSection() {
@@ -9,10 +10,12 @@ export default function ErfahrungenCtaSection() {
           <div className="order-2 flex justify-center lg:order-1 lg:justify-start">
             <div className="relative w-full max-w-[440px] md:max-w-[470px]">
               {/* <div className="absolute left-[10px] top-[4px] h-full w-full rounded-[14px] bg-[#7B8F82] opacity-[0.88] rotate-[-6deg]" /> */}
-              <img
+              <Image
                 src={aboutHeroGroupPhoto.src}
                 alt="Group photo of the Invest4Kids team, which supports parents with financial advice"
                 className="relative z-[2] h-auto w-full rounded-[14px] object-cover shadow-[0_10px_24px_rgba(0,0,0,0.12)]"
+                width={1000}
+                height={1000}
                 draggable={false}
               />
             </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import googleIcon from "@/assets/images/erfahrungen/google-icon.svg";
 import googleStar from "@/assets/images/erfahrungen/google-star.svg";
@@ -99,10 +100,12 @@ function ReviewCard({
       <div className="flex items-start justify-between gap-[12px]">
         <div className="flex min-w-0 items-center gap-[12px]">
           {review.avatar ? (
-            <img
+            <Image
               src={review.avatar}
               alt={review.name}
               className="h-[40px] w-[40px] shrink-0 rounded-full object-cover"
+              width={1000}
+              height={1000}
               draggable={false}
             />
           ) : (
@@ -135,10 +138,12 @@ function ReviewCard({
 
         {isDesktop ? (
           <div className="group/google relative z-[30] shrink-0">
-            <img
+            <Image
               src={googleIcon.src}
               alt="Google"
               className="mt-[2px] h-[20px] w-[20px] shrink-0"
+              width={1000}
+              height={1000}
               draggable={false}
             />
             <div className="pointer-events-none absolute right-0 top-[-44px] z-[40] whitespace-nowrap rounded-[8px] bg-black px-[10px] py-[7px] text-[12px] leading-none text-white opacity-0 shadow-[0_6px_18px_rgba(0,0,0,0.28)] transition-opacity duration-200 group-hover/google:opacity-100">
@@ -146,10 +151,12 @@ function ReviewCard({
             </div>
           </div>
         ) : (
-          <img
+          <Image
             src={googleIcon.src}
             alt="Google"
             className="mt-[2px] h-[20px] w-[20px] shrink-0"
+            width={1000}
+            height={1000}
             draggable={false}
           />
         )}
@@ -158,11 +165,13 @@ function ReviewCard({
       <div className="mt-[12px] flex items-center gap-[6px]">
         <div className="flex items-center gap-[2px]">
           {Array.from({ length: 5 }).map((_, starIndex) => (
-            <img
+            <Image
               key={starIndex}
               src={googleStar.src}
               alt="star"
               className="h-[17px] w-[17px]"
+              width={1000}
+              height={1000}
               draggable={false}
             />
           ))}
@@ -510,10 +519,12 @@ export default function ErfahrungenReviewsSection() {
                       <div className="flex items-start justify-between gap-[12px]">
                         <div className="flex min-w-0 items-center gap-[12px]">
                           {review.avatar ? (
-                            <img
+                            <Image
                               src={review.avatar}
                               alt={review.name}
                               className="h-[40px] w-[40px] shrink-0 rounded-full object-cover"
+                              width={1000}
+                              height={1000}
                               draggable={false}
                             />
                           ) : (
@@ -539,10 +550,12 @@ export default function ErfahrungenReviewsSection() {
                         </div>
 
                         <div className="group/google relative z-[30] shrink-0">
-                          <img
+                          <Image
                             src={googleIcon.src}
                             alt="Google"
                             className="mt-[2px] h-[20px] w-[20px] shrink-0"
+                            width={1000}
+                            height={1000}
                             draggable={false}
                           />
                           <div className="pointer-events-none absolute right-0 top-[-44px] z-[40] whitespace-nowrap rounded-[8px] bg-black px-[10px] py-[7px] text-[12px] leading-none text-white opacity-0 shadow-[0_6px_18px_rgba(0,0,0,0.28)] transition-opacity duration-200 group-hover/google:opacity-100">
@@ -554,11 +567,13 @@ export default function ErfahrungenReviewsSection() {
                       <div className="mt-[12px] flex items-center gap-[6px]">
                         <div className="flex items-center gap-[2px]">
                           {Array.from({ length: 5 }).map((_, starIndex) => (
-                            <img
+                            <Image
                               key={starIndex}
                               src={googleStar.src}
                               alt="star"
                               className="h-[17px] w-[17px]"
+                              width={1000}
+                              height={1000}
                               draggable={false}
                             />
                           ))}

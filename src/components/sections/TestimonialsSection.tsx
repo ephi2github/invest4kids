@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 type Testimonial = {
   initial: string;
   name: string;
@@ -91,10 +93,12 @@ export default function TestimonialsSection({
       <div className="mx-auto max-w-[1100px]">
         <div className="mb-4 flex justify-center">
           <div className="inline-flex w-fit items-center gap-[10px] rounded-full border border-[#F8BF3C] bg-[#FFFAEE] px-4 py-[5px]">
-            <img
+            <Image
               src="/parents.webp"
               alt="People"
               className="w-[41px]"
+              width={1000}
+              height={1000}
               draggable={false}
             />
             <p className="font-poppins text-[10px] font-normal leading-none text-[#4B5563] md:text-[12px]">
@@ -161,10 +165,12 @@ export default function TestimonialsSection({
 
         <div className="mt-6 flex flex-col-reverse items-start gap-6 md:mt-8 md:flex-row md:items-end md:justify-between">
           <div className="w-full md:w-auto">
-            <img
+            <Image
               src="/review-stars.png"
               alt="4.9 stars"
               className="mb-3 w-full max-w-[140px]"
+              width={1000}
+              height={1000}
               draggable={false}
             />
             <p className="font-poppins text-[18px] font-medium leading-[1.5] text-[#4B5563] md:text-[20px]">

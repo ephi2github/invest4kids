@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import type { TimelineBlock, TimelinePill } from "@/lib/invest4kidsApi";
 
 const IMAGE_BASE_URL = "https://invest4kids.de";
@@ -122,8 +123,7 @@ function MobilePillRows({
           {pillGroup.map((pill, pIndex) => (
             <div className="text-[10px] flex items-center bg-bg-cream border border-accent py-1.5 px-[18px] rounded-full flex-none gap-3 opacity-85" key={`pill-${rowIndex}-${pIndex}`}>
               {pill.imgSrc && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img className="w-3 h-3" src={resolveImageUrl(pill.imgSrc)} alt="" />
+                <Image className="w-3 h-3" src={resolveImageUrl(pill.imgSrc) ?? ""} alt="" width={1000} height={1000} />
               )}
               <span className="text-gray-600 font-outfit font-normal text-[10px] leading-none whitespace-nowrap">{pill.text}</span>
             </div>
@@ -152,8 +152,7 @@ function DesktopPillRows({
           {pillGroup.map((pill, pIndex) => (
             <div className="text-[10px] flex items-center bg-bg-cream border border-accent py-[7px] px-[18px] rounded-full flex-none gap-3" key={`pill-${rowIndex}-${pIndex}`}>
               {pill.imgSrc && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img className="w-3 h-3" src={resolveImageUrl(pill.imgSrc)} alt="" />
+                <Image className="w-3 h-3" src={resolveImageUrl(pill.imgSrc) ?? ""} alt="" width={1000} height={1000} />
               )}
               <span className="text-gray-600 font-outfit font-normal text-[13px] leading-[13px] whitespace-nowrap">{pill.text}</span>
             </div>
@@ -192,8 +191,7 @@ function TimelineStep({
         <div className="flex-1 flex flex-col border border-primary-light rounded-[20px] overflow-hidden bg-white">
           {imageUrl && (
             <div className="rounded-t-[20px] overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="w-full h-auto block object-cover" src={imageUrl} alt="" />
+              <Image className="w-full h-auto block object-cover" src={imageUrl} alt="" width={1000} height={1000} />
             </div>
           )}
           {block.age !== null && block.age_text && (
@@ -248,8 +246,7 @@ function TimelineStep({
         <div className="w-full relative box-border">
           {imageUrl && (
             <div className="relative border border-primary-light rounded-t-[20px] overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img className="w-full h-auto rounded-t-[20px] block object-cover" src={imageUrl} alt="" />
+              <Image className="w-full h-auto rounded-t-[20px] block object-cover" src={imageUrl} alt="" width={1000} height={1000} />
               {hasPills && (
                 <div
                   className={isBottomRight

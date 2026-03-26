@@ -1,3 +1,4 @@
+import Image from "next/image"
 import Link from "next/link"
 import type { BlogPost } from "@/lib/blogData"
 
@@ -5,10 +6,12 @@ export default function BlogPostCard({ post, showExcerpt = false }: { post: Blog
   return (
     <div className="flex w-full sm:max-w-[348px] h-full flex-col overflow-hidden rounded-[10px] border border-[#D4DADF] bg-[#FDFDFD]">
       <Link href={`/blog/${post.slug}`} className="block">
-        <img
+        <Image
           src={post.image}
           alt={post.title}
           className="w-full object-cover md:h-[220px]"
+          width={1000}
+          height={1000}
           draggable={false}
         />
       </Link>
