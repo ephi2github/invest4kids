@@ -236,3 +236,47 @@ html {
 .kw-age-capital-mobile p:last-child.capital-expression {
   font-size: 18px; font-weight: 500;
 }
+
+/* Transparenz page: comparison table */
+.compare-table {
+  border-collapse: separate;
+  border-spacing: 10px;
+  width: 100%;
+  font-size: 18px;
+  table-layout: fixed;
+  margin-left: -10px;
+}
+
+.compare-table th,
+.compare-table td {
+  border: 1px solid #5a6e96;
+  border-radius: 8px;
+  padding: 0 10px;
+  text-align: left;
+  vertical-align: middle;
+  font-weight: 400;
+  height: 85px;
+  color: #2C3E50;
+}
+
+.compare-table td {
+  background: #fff;
+}
+
+.compare-table th {
+  font-weight: 700;
+  background: linear-gradient(90deg, #EFFAFD 0%, #FFFAEE 100%);
+}
+
+.compare-table td:first-child,
+.compare-table th:first-child {
+  font-weight: 700;
+}
+
+@media (max-width: 767px) {
+  .compare-table { font-size: 12.5px; }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .compare-table { font-size: 14px; }
+}
