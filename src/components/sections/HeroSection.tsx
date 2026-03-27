@@ -8,7 +8,7 @@ export default function HeroSection() {
   return (
     <section className="relative bg-bg-light-blue px-5 pb-20 pt-12.5 md:pb-28 md:pt-[190px]">
       <Container>
-        <div className="relative flex flex-col items-center gap-10 md:flex-row md:gap-6">
+        <div className="relative flex flex-col items-center gap-6 md:flex-row md:gap-6">
           {/* Left — Text content */}
           <div className="relative z-10 w-full md:w-[590px]">
             <h1 className="text-[27px] md:text-[34px] font-bold md:font-extrabold leading-10 md:leading-tight text-text-medium pb-[24px]">
@@ -16,10 +16,10 @@ export default function HeroSection() {
               an deiner Seite
             </h1>
  
-            <div className="flex flex-col gap-y-1 md:gap-y-2.5 font-outfit w-full pb-8.5">
+            <div className="flex flex-col gap-y-2.5 font-outfit w-full pb-8.5">
               <div className="flex items-center gap-3 w-full">
                 <CheckIcon />
-                <p className="text-[16px] md:text-[18px] leading-6 text-[#4B5563]">
+                <p className="text-[16px] md:text-[18px] leading-5.5 md:leading-6 text-[#4B5563]">
                   <span className="underline decoration-text-dark/30 underline-offset-2">
                     Ø25.703 € mehr pro Kind
                   </span>
@@ -28,14 +28,14 @@ export default function HeroSection() {
               </div>
               <div className="flex items-center gap-3 w-full">
                 <CheckIcon />
-                <p className="text-[16px] md:text-[18px] leading-6 text-[#4B5563]">
+                <p className="text-[16px] md:text-[18px] leading-5.5 md:leading-6 text-[#4B5563]">
                   In einer 30 Minuten Videokonferenz bequem von Zuhause aus zum
                   perfekten ETF-Investment für dein Kind
                 </p>
               </div>
               <div className="flex items-center gap-3 w-full">
                 <CheckIcon />
-                <p className="text-[16px] md:text-[18px] leading-6 text-[#4B5563]">
+                <p className="text-[16px] md:text-[18px] leading-5.5 md:leading-6 text-[#4B5563]">
                   Lehn dich zurück und sieh zu, wie das Vermögen deines Kindes
                   wächst – unsere Experten kümmern sich um den Rest
                 </p>
@@ -67,10 +67,10 @@ export default function HeroSection() {
                   alt="5200+ Eltern vertrauen uns"
                   width={70}
                   height={23}
-                  className="h-auto w-auto"
+                  className="h-[23px] md:h-auto w-auto"
                 />
               </div>
-              <p className="text-[16px] md:text-[18px] text-text-muted font-outfit">
+              <p className="text-[16px] md:text-[18px] text-[#4B5563] font-outfit">
                 5200+ Eltern vertrauen uns
               </p>
             </div>

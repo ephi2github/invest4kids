@@ -33,7 +33,7 @@ export default function AdvantagesGrid() {
       <div className="mx-auto w-full max-w-[1100px] px-4 py-14 sm:px-6 sm:py-16 lg:px-0 lg:py-20">
         {/* Heading */}
         <div className="text-center">
-          <h2 className="mx-auto max-w-[1100px] font-poppins text-[27px]  font-bold  text-text-medium md:text-[34px]">
+          <h2 className="mx-auto max-w-3/5 md:max-w-[1100px] font-poppins text-[27px]  font-bold  text-text-medium md:text-[34px]">
             Deine Vorteile auf einen Blick
           </h2>
         </div>
@@ -64,7 +64,7 @@ export default function AdvantagesGrid() {
         <div className="mt-7 flex flex-col gap-6 lg:mt-5 lg:flex-row lg:items-center lg:justify-between">
           <a
             href="#"
-            className="font-poppins text-[20px]  font-semibold tracking-[-0.02em] text-[#4B5563] underline  underline-offset-2"
+            className="font-poppins text-center md:text-start text-[18px] md:text-[20px] font-bold md:font-semibold tracking-[-0.02em] text-[#4B5563] underline  underline-offset-2"
           >
             mehr zum Invest4Kids Konzept findest du hier →
           </a>

@@ -153,7 +153,7 @@ export default function TestimonialsSection({
                     {item.initial}
                   </div>
                   <div className="flex flex-col gap-1.5">
-                    <p className="font-outfit text-[16px] font-medium leading-none text-[#2C3E50] md:text-[18px]">
+                    <p className="font-outfit text-[16px] font-bold md:font-medium leading-none text-[#2C3E50] md:text-[18px]">
                       {item.name}
                     </p>
                     <p className="font-outfit text-[10px] font-normal leading-none text-[#4B5563] md:text-[12px]">
@@ -166,17 +166,17 @@ export default function TestimonialsSection({
           ))}
         </div>
 
-        <div className="mt-6 flex flex-col-reverse items-start gap-6 md:mt-8 md:flex-row md:items-end md:justify-between">
+        <div className="mt-6 flex flex-col  gap-6 md:mt-8 md:flex-row md:items-end md:justify-between">
           <div className="w-full md:w-auto">
             <Image
               src="/review-stars.png"
               alt="4.9 stars"
-              className="mb-3 w-full max-w-[140px]"
+              className="mb-3 w-full max-w-[140px] mx-auto"
               width={1000}
               height={1000}
               draggable={false}
             />
-            <p className="font-poppins text-[18px] font-medium leading-[1.5] text-[#4B5563] md:text-[20px]">
+            <p className="font-poppins text-[18px] font-medium leading-[1.5] text-[#4B5563] md:text-[20px] text-center md:text-start">
               4.9 stars with over 1,000 genuine reviews on Trustpilot and Google
             </p>
           </div>

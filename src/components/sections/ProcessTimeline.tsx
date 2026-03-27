@@ -86,22 +86,22 @@ export default function ProcessTimeline() {
             className="bg-[#F7F7F8] py-25"
         >
             <div className="mx-auto max-w-280 px-[20px] md:px-0">
-                <h2 className="text-center text-[26px] leading-[1.08] font-bold tracking-[-0.03em] text-[#2E4259] md:text-[34px]">
+                <h2 className="text-center text-[27px] leading-[1.5] md:leading-[1.08] font-bold tracking-[-0.03em] text-[#2E4259] md:text-[34px]">
                     Wie sieht eine Zusammenarbeit mit uns aus?
                 </h2>
 
-                <p className="mx-auto mt-[12px] max-w-[860px] text-center text-[16px] leading-[1.4] text-[#556274] sm:text-[18px] md:mt-[16px] md:text-[20px]">
+                <p className="mx-auto mt-[12px] max-w-[860px] text-center font-medium md:font-normal text-[18px] leading-[1.4] text-[#556274] sm:text-[18px] md:mt-[16px] md:text-[20px]">
                     So läuft deine kostenlose Investmentberatung mit Invest4Kids ab:
                 </p>
 
                 <div className="relative mt-[28px] sm:mt-[34px] md:mt-[56px] pt-12 md:pt-0">
                     {/* base line */}
-                    <div className="absolute top-0 bottom-0 left-[24px] w-[3px] bg-[#D8DDE3] md:left-1/2 md:-translate-x-1/2" />
+                    <div className="absolute top-0 bottom-0 left-[19px] w-[3px] bg-[#D8DDE3] md:left-1/2 md:-translate-x-1/2" />
 
                     {/* animated fill */}
                     <div
                         ref={fillRef}
-                        className="absolute top-0 left-[24px] w-[3px] bg-[#173F88] md:left-1/2 md:-translate-x-1/2"
+                        className="absolute top-0 left-[19px] w-[3px] bg-[#173F88] md:left-1/2 md:-translate-x-1/2"
                     />
 
                     <div className="space-y-5.5 sm:space-b-[26px]">
@@ -117,7 +117,7 @@ export default function ProcessTimeline() {
                                     ref={(el) => {
                                         stepRefs.current[0] = el;
                                     }}
-                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#E4E4E7] text-[20px] font-medium text-[#173F88]"
+                                    className="flex h-10 md:h-[50px] aspect-square items-center justify-center rounded-full bg-[#E4E4E7] md:text-[20px] font-medium text-[#173F88]"
                                 >
                                     01
                                 </div>
@@ -135,12 +135,12 @@ export default function ProcessTimeline() {
                                         className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[196px] md:w-[140px] md:shrink-0"
                                     />
 
-                                    <div className="mt-[14px] sm:mt-[16px] md:mt-0">
-                                        <h3 className="text-[18px] leading-[1.22] font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
+                                    <div className="mt-[24px] sm:mt-[16px] md:mt-0">
+                                        <h3 className="text-[18px] leading-[1.22] font-bold md:font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
                                             Telefonisches Kennenlernen
                                         </h3>
 
-                                        <p className="mt-[10px] text-[16px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
+                                        <p className="mt-[24px] text-[16px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
                                             Innerhalb der nächsten 48 Stunden ruft dich ein
                                             Mitarbeiter unseres Team an und klärt vorab die
                                             wichtigsten Fragen.
@@ -162,7 +162,7 @@ export default function ProcessTimeline() {
                                     ref={(el) => {
                                         stepRefs.current[1] = el;
                                     }}
-                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#E4E4E7] text-[20px] font-medium text-[#173F88]"
+                                    className="flex h-10 md:h-[50px] aspect-square items-center justify-center rounded-full bg-[#E4E4E7] md:text-[20px] font-medium text-[#173F88]"
                                 >
                                     02
                                 </div>
@@ -180,12 +180,12 @@ export default function ProcessTimeline() {
                                         className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[200px] md:w-[140px] md:shrink-0"
                                     />
 
-                                    <div className="mt-[14px] sm:mt-[16px] md:mt-0">
-                                        <h3 className="text-[18px] leading-[1.22] font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
+                                    <div className="mt-[24px] sm:mt-[16px] md:mt-0">
+                                        <h3 className="text-[18px] leading-[1.22] font-bold md:font-medium  tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
                                             Dein Beratungsgespräch
                                         </h3>
 
-                                        <p className="mt-[10px] text-[16px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
+                                        <p className="mt-[24px] text-[16px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
                                             In der 30-minütigen Beratung stellt dein persönlicher
                                             Berater eine auf dich und dein Kind angepasste Strategie
                                             zusammen.
@@ -207,7 +207,7 @@ export default function ProcessTimeline() {
                                     ref={(el) => {
                                         stepRefs.current[2] = el;
                                     }}
-                                    className="flex h-[50px] w-[50px] items-center justify-center rounded-full bg-[#E4E4E7] text-[20px] font-medium text-[#173F88]"
+                                    className="flex h-10 md:h-[50px] aspect-square items-center justify-center rounded-full bg-[#E4E4E7] md:text-[20px] font-medium text-[#173F88]"
                                 >
                                     03
                                 </div>
@@ -221,21 +221,23 @@ export default function ProcessTimeline() {
                                         draggable={false}
                                         src={stepThreeImage}
                                         alt="Umsetzung"
-                                        className="max-w-69.25 min-h-64.25 h-full w-full rounded-[10px] object-cover md:max-w-35 md:shrink-0"
+                                        className="max-w-69.25 md:min-h-64.25 h-[199px] md:h-full w-full rounded-[10px] object-cover md:max-w-35 md:shrink-0"
                                     />
 
-                                    <div className="mt-[14px] sm:mt-[16px] md:mt-0">
-                                        <h3 className="text-[18px] leading-[1.22] font-medium tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
+                                    <div className="mt-[24px] sm:mt-[16px] md:mt-0">
+                                        <h3 className="text-[18px] leading-[1.22] font-bold md:font-medium  tracking-[-0.02em] text-[#2E4259] sm:text-[20px]">
                                             Lehn dich zurück!
                                         </h3>
 
-                                        <p className="mt-[10px] text-[16px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
+                                        <p className="mt-[24px] text-[16px] leading-[1.45] text-[#556274] sm:text-[18px] font-outfit md:mt-[14px]">
                                             Deine Arbeit ist getan! Von der Umsetzung bis hin zur
                                             Überwachung und Optimierung, wir kümmern uns um alles! -
                                             einfach, unverbindlich und Schritt für Schritt begleitet.
                                         </p>
 
-                                        <button className="mt-3.5 font-outfit hidden md:inline-flex h-10 min-w-33 items-center justify-center rounded-full border border-[#8EB8D1] bg-transparent text-[13px] font-medium text-[#2E4259] transition-all duration-600 hover:bg-bg-light-blue cursor-pointer sm:h-10.5 sm:min-w-35.5 sm:text-[18px] md:mt-4 md:h-12.5 md:px-9 md:py-3.75">
+                                        <button className="mt-3.5 text-base font-outfit inline-flex h-12 w-full min-w-33 items-center justify-center
+                                        rounded-full border border-[#8EB8D1] bg-transparent font-medium text-[#2E4259] transition-all duration-600
+                                        hover:bg-bg-light-blue cursor-pointer sm:h-10.5 sm:min-w-35.5 sm:text-[18px] md:mt-4 md:h-12.5 px-9 py-3.75">
                                             Weitere Infos →
                                         </button>
                                     </div>

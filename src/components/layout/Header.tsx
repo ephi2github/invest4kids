@@ -375,7 +375,7 @@ export default function Header() {
               href="https://funnel.perspective.co/60b7c8d2bcad43001f5c35a3/690b34a62100cd003c13e6ad/"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-full bg-primary py-3.75 px-8.5 h-[48px] font-outfit font-medium text-white transition-colors hover:bg-primary-dark"
+              className="inline-flex items-center justify-center gap-1.5 rounded-full bg-primary py-3.75 px-9 md:px-8.5 h-[48px] font-outfit font-medium text-white transition-colors hover:bg-primary-dark"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

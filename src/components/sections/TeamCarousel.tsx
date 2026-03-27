@@ -91,7 +91,7 @@ export default function TeamCarousel() {
     <section className="bg-bg-cream">
       <div className="py-14 md:pt-25 md:pb-17.5 mx-auto w-full md:max-w-346.5">
         <div className="md:mx-35.75 flex flex-col md:flex-row items-center justify-between px-5 md:px-0 gap-y-5">
-          <h2 className="text-center font-extrabold text-[27px] md:text-[28px] leading-[1.7] text-text-medium">
+          <h2 className="text-center font-extrabold text-[22px] md:text-[28px] leading-[1.7] text-text-medium">
             Dein Invest4Kids Team
           </h2>
           <a

@@ -35,7 +35,7 @@ export default function MissionSection() {
             
             {/* Intro content */}
             <div className="text-center lg:text-left ">
-              <h2 className="mx-auto font-poppins text-[28px] leading-[1.2] font-extrabold  text-text-medium lg:mx-0">
+              <h2 className="mx-auto font-poppins text-[22px] md:text-[28px] leading-[1.5] md:leading-[1.2] font-bold md:font-extrabold  text-text-medium lg:mx-0">
                 Invest4Kids ist die erste Anlaufstelle für Eltern, die clever
                 und sicher für ihr Kind in ETFs investieren wollen.
               </h2>
