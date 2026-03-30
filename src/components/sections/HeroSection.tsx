@@ -67,6 +67,7 @@ export default function HeroSection() {
                   alt="5200+ Eltern vertrauen uns"
                   width={70}
                   height={23}
+                  sizes="70px"
                   className="h-[23px] md:h-auto w-auto"
                 />
               </div>

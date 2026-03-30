@@ -235,6 +235,7 @@ export default function Header() {
               alt="Invest4Kids"
               width={130}
               height={82}
+              sizes="71px"
               className="h-11.25 w-auto"
             />
           </Link>
@@ -366,6 +367,7 @@ export default function Header() {
               alt="Invest4Kids"
               width={2048}
               height={1295}
+              sizes="70px"
               className="h-11 w-auto"
             />
           </Link>

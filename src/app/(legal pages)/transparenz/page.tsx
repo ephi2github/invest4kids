@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import hintIcon from "@/assets/icons/hint.png";
+import "./transparenz.css";
 
 export const metadata: Metadata = {
   title: "Transparenz - Invest4Kids",
@@ -124,7 +125,7 @@ function CtaButton({ children, href }: { children: React.ReactNode; href: string
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex w-full items-center justify-center gap-2 rounded-full border border-primary-light bg-primary px-[36px] py-[15px] font-outfit text-[16px] font-medium leading-none text-white transition-colors duration-300 hover:border-accent hover:bg-accent hover:text-text-medium md:text-[18px]"
+      className="inline-flex w-full md:w-fit items-center justify-center gap-2 rounded-full border border-primary-light bg-primary px-[36px] py-[15px] font-outfit text-[16px] font-medium leading-none text-white transition-colors duration-300 hover:border-accent hover:bg-accent hover:text-text-medium md:text-[18px]"
     >
       <CalendarIcon />
       <span>{children}</span>
@@ -583,7 +584,7 @@ export default function TransparenzPage() {
                 </b>
               </p>
             </div>
-            <div className="pt-[34px] w-full md:w-fit justify-center flex">
+            <div className="pt-[34px] w-full justify-center items-center flex">
               <CtaButton href="https://www.invest4kids-beratung.de/start">
                 Starte jetzt für dein Kind
               </CtaButton>

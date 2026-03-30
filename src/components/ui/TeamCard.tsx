@@ -28,6 +28,7 @@ export default function TeamCard({
             alt={name}
             width={464}
             height={668}
+            sizes="253px"
             className="h-full w-full object-contain object-top"
           />
           <div className="pointer-events-none absolute inset-x-0 bottom-0 h-[46%] bg-linear-to-t from-white via-white/50 to-transparent" />

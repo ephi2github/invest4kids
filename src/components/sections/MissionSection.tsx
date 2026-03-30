@@ -29,6 +29,7 @@ export default function MissionSection() {
                 alt="Invest4Kids team portrait"
                 width={1024}
                 height={788}
+                sizes="(max-width: 767px) 100vw, (max-width: 1023px) 373px, 356px"
                 className="h-full w-full object-cover"
               />
             </div>

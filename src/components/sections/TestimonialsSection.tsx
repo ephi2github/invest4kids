@@ -102,6 +102,7 @@ export default function TestimonialsSection({
               className="w-[41px]"
               width={1000}
               height={1000}
+              sizes="41px"
               draggable={false}
             />
             <p className="font-poppins text-[10px] font-normal leading-none text-[#4B5563] md:text-[12px]">
@@ -174,6 +175,7 @@ export default function TestimonialsSection({
               className="mb-3 w-full max-w-[140px] mx-auto"
               width={1000}
               height={1000}
+              sizes="140px"
               draggable={false}
             />
             <p className="font-poppins text-[18px] font-medium leading-[1.5] text-[#4B5563] md:text-[20px] text-center md:text-start">

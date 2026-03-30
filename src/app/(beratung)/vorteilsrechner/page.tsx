@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import VorteilsrechnerHeroSection from "@/components/sections/VorteilsrechnerHeroSection";
 import VorteilsrechnerCalculator from "@/components/sections/VorteilsrechnerCalculator";
+import "./vorteilsrechner.css";
 
 export const metadata: Metadata = {
   title: "Individueller Rechner - Invest4Kids",
@@ -12,7 +13,7 @@ export default function VorteilsrechnerPage() {
   return (
     <main>
       <VorteilsrechnerHeroSection />
-      <VorteilsrechnerCalculator  />
+      <VorteilsrechnerCalculator />
     </main>
   );
 }

@@ -132,6 +132,7 @@ export default function ProcessTimeline() {
                                         height={1000}
                                         src={stepOneImage}
                                         alt="Telefonisches Kennenlernen"
+                                        sizes="(max-width: 767px) 277px, 140px"
                                         className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[196px] md:w-[140px] md:shrink-0"
                                     />
 
@@ -177,6 +178,7 @@ export default function ProcessTimeline() {
                                         height={1000}
                                         src={stepTwoImage}
                                         alt="Beratungsgespräch"
+                                        sizes="(max-width: 767px) 277px, 140px"
                                         className="max-w-[277px] h-[199px] w-full rounded-[10px] object-cover md:max-w-none md:h-[200px] md:w-[140px] md:shrink-0"
                                     />
 
@@ -221,6 +223,7 @@ export default function ProcessTimeline() {
                                         draggable={false}
                                         src={stepThreeImage}
                                         alt="Umsetzung"
+                                        sizes="(max-width: 767px) 277px, 140px"
                                         className="max-w-69.25 md:min-h-64.25 h-[199px] md:h-full w-full rounded-[10px] object-cover md:max-w-35 md:shrink-0"
                                     />
 

@@ -68,6 +68,7 @@ export default function KnownFromSection() {
                   alt={logo.alt}
                   width={logo.width}
                   height={logo.height}
+                  sizes="(max-width: 767px) 122px, (max-width: 1023px) 150px, 170px"
                   className="h-full w-auto object-contain opacity-50 grayscale transition-all duration-300 hover:opacity-100 hover:grayscale-0"
                 />
               </div>

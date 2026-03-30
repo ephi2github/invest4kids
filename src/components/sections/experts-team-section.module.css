@@ -1,0 +1,16 @@
+.scroller {
+  overflow: hidden;
+  width: 100%;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
+}
+
+.track {
+  display: flex;
+  will-change: scroll-position;
+}
+
+.dragging {
+  cursor: grabbing;
+}
