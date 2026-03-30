@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import "./etf-fuer-kinder.css";
 
 export const metadata: Metadata = {
   title: "ETF für Kinder",

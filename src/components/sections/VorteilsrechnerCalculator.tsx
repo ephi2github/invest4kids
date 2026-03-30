@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useCallback } from "react";
+import { useState, useCallback, useMemo, useEffect } from "react";
+import Image from "next/image";
 import NoUiSlider from "@/components/NoUiSlider";
 import VorteilsrechnerTimeline from "@/components/sections/VorteilsrechnerTimeline";
 import {
@@ -50,13 +51,85 @@ function calculateInvestment(
   };
 }
 
+interface CapitalDataPoint {
+  age: number;
+  invested: number;
+  returns: number;
+  total: number;
+}
+
+function formatWholeNumber(value: number): string {
+  return Math.round(value).toLocaleString("en-US");
+}
+
+function generateCapitalData(
+  startAge: number,
+  endAge: number,
+  monthlyInvestment: number,
+  annualReturn: number,
+  initialInvestment: number
+): CapitalDataPoint[] {
+  const safeStartAge = Math.max(0, Math.floor(startAge));
+  const safeEndAge = Math.max(safeStartAge, Math.floor(endAge));
+  const monthlyRate = annualReturn / 100 / 12;
+
+  let capital = initialInvestment;
+  let totalContributions = initialInvestment;
+  let accumulatedReturns = 0;
+
+  const points: CapitalDataPoint[] = [
+    {
+      age: safeStartAge,
+      invested: Math.round(totalContributions),
+      returns: 0,
+      total: Math.round(totalContributions),
+    },
+  ];
+
+  for (let age = safeStartAge + 1; age <= safeEndAge; age += 1) {
+    let returnsThisYear = 0;
+
+    for (let month = 0; month < 12; month += 1) {
+      capital += monthlyInvestment;
+      totalContributions += monthlyInvestment;
+
+      const beforeGrowth = capital;
+      if (monthlyRate > 0) {
+        capital *= 1 + monthlyRate;
+      }
+      returnsThisYear += capital - beforeGrowth;
+    }
+
+    accumulatedReturns += returnsThisYear;
+    const invested = Math.round(totalContributions);
+    const returns = Math.round(accumulatedReturns);
+
+    points.push({
+      age,
+      invested,
+      returns,
+      total: invested + returns,
+    });
+  }
+
+  return points;
+}
+
 interface VorteilsrechnerCalculatorProps {
   showExFields?: boolean;
+  withGrowthSection?: boolean;
+  locale?: "de" | "en";
 }
 
 export default function VorteilsrechnerCalculator({
   showExFields = false,
+  withGrowthSection = false,
+  locale = "de",
 }: VorteilsrechnerCalculatorProps) {
+  const minChartAge = 10;
+  const maxChartAge = 67;
+  const isEnglish = locale === "en";
+
   // Form state (matching original Vue defaults)
   const [childName, setChildName] = useState("");
   const [childAge, setChildAge] = useState(0);
@@ -70,6 +143,8 @@ export default function VorteilsrechnerCalculator({
   const [geldgeschenke, setGeldgeschenke] = useState(true);
   const [wenigerSparen, setWenigerSparen] = useState(true);
   const [advancedSettings, setAdvancedSettings] = useState(false);
+  const [showGrowthChart, setShowGrowthChart] = useState(false);
+  const [chartEndAge, setChartEndAge] = useState(40);
 
   // Result / API state
   const [showResult, setShowResult] = useState(false);
@@ -122,6 +197,7 @@ export default function VorteilsrechnerCalculator({
       hochzeit,
       geldgeschenke,
       wenigerSparen,
+      locale,
     };
 
     try {
@@ -153,6 +229,7 @@ export default function VorteilsrechnerCalculator({
     hochzeit,
     geldgeschenke,
     wenigerSparen,
+    locale,
   ]);
 
   const result = calculateInvestment(
@@ -160,6 +237,72 @@ export default function VorteilsrechnerCalculator({
     investmentAmount,
     einmalzahlung,
     rendite
+  );
+
+  const minEndAge = Math.max(minChartAge, childAge);
+
+  useEffect(() => {
+    setChartEndAge((currentValue) => {
+      if (currentValue < minEndAge) return minEndAge;
+      if (currentValue > maxChartAge) return maxChartAge;
+      return currentValue;
+    });
+  }, [minEndAge, maxChartAge]);
+
+  const chartData = useMemo(
+    () =>
+      generateCapitalData(
+        childAge,
+        chartEndAge,
+        investmentAmount,
+        rendite,
+        einmalzahlung
+      ),
+    [childAge, chartEndAge, investmentAmount, rendite, einmalzahlung]
+  );
+
+  const yAxisMax = useMemo(() => {
+    const maxTotal = chartData.reduce((max, point) => {
+      return Math.max(max, point.total);
+    }, 0);
+    const scaleStep = 100000;
+    return Math.max(scaleStep, Math.ceil(maxTotal / scaleStep) * scaleStep);
+  }, [chartData]);
+
+  const yAxisTicks = useMemo(() => {
+    const tickCount = 6;
+    return Array.from({ length: tickCount + 1 }, (_, index) => {
+      return Math.round(yAxisMax - (yAxisMax / tickCount) * index);
+    });
+  }, [yAxisMax]);
+
+  const displayChildName = childName.trim() || (isEnglish ? "your child" : "dein Kind");
+
+  const toggleGrowthChart = useCallback(() => {
+    setShowGrowthChart((value) => !value);
+  }, []);
+
+  const handleChartEndAgeChange = useCallback(
+    (value: number) => {
+      const clampedValue = Math.max(
+        minEndAge,
+        Math.min(maxChartAge, Math.round(value))
+      );
+      setChartEndAge(clampedValue);
+    },
+    [minEndAge, maxChartAge]
+  );
+
+  const handleChartEndAgeInputChange = useCallback(
+    (inputValue: string) => {
+      const parsedValue = Number.parseInt(inputValue, 10);
+      if (Number.isNaN(parsedValue)) {
+        setChartEndAge(minEndAge);
+        return;
+      }
+      handleChartEndAgeChange(parsedValue);
+    },
+    [handleChartEndAgeChange, minEndAge]
   );
 
   return (
@@ -502,6 +645,174 @@ export default function VorteilsrechnerCalculator({
           blocks={apiBlocks}
           isLoading={isCalculating}
         />
+
+        {withGrowthSection && (
+          <div className="mx-0 mt-[100px] mb-[50px]">
+            <div className="ir-growth-message relative px-[24px] py-[28px] md:px-[34px] md:py-[34px]">
+              <h3 className="font-poppins text-center text-[22px] font-extrabold leading-[125%] text-text-medium md:text-[28px]">
+                {isEnglish ? (
+                  <>
+                    With the Invest4Kids concept, tailored to parents and
+                    <br className="hidden md:block" /> their children, you
+                    invest specifically in ETFs and secure the best long-term
+                    opportunities for <span>{displayChildName}</span>
+                  </>
+                ) : (
+                  <>
+                    Mit dem Invest4Kids-Konzept investierst du speziell in ETFs
+                    und sicherst die besten langfristigen Chancen für{" "}
+                    <span>{displayChildName}</span>
+                  </>
+                )}
+              </h3>
+              <button
+                type="button"
+                onClick={toggleGrowthChart}
+                className="ir-growth-toggle"
+                aria-expanded={showGrowthChart}
+                aria-controls="investment-growth-chart"
+                aria-label={showGrowthChart ? "Hide graph" : "Show graph"}
+              >
+                <Image
+                  src="https://invest4kids.de/wp-content/uploads/2025/12/show-graf-icon.png"
+                  alt=""
+                  width={22}
+                  height={22}
+                />
+              </button>
+            </div>
+
+            {showGrowthChart && (
+              <div id="investment-growth-chart" className="pt-[46px]">
+                <div className="overflow-x-auto">
+                  <div className="mx-auto min-w-[780px]">
+                    <div className="mb-4 flex items-center justify-center gap-5 font-outfit text-base font-normal text-[#7d828b]">
+                      <span className="inline-flex items-center gap-2">
+                        <span className="h-3 w-10 bg-[#60a5fa]" />
+                        <span>{isEnglish ? "Invested" : "Investiert"}</span>
+                      </span>
+                      <span className="inline-flex items-center gap-2">
+                        <span className="h-3 w-10 bg-[#f8bf3c]" />
+                        <span>{isEnglish ? "Returns" : "Rendite"}</span>
+                      </span>
+                    </div>
+
+                    <div className="grid grid-cols-[74px_1fr] gap-2">
+                      <div className="ir-chart-y-axis">
+                        {yAxisTicks.map((value) => (
+                          <span key={value}>{formatWholeNumber(value)}</span>
+                        ))}
+                      </div>
+
+                      <div>
+                        <div className="ir-chart-plot">
+                          {yAxisTicks.map((_, index) => (
+                            <div
+                              key={`line-${index}`}
+                              className="ir-chart-grid-line"
+                              style={{
+                                top: `${(index / (yAxisTicks.length - 1)) * 100}%`,
+                              }}
+                            />
+                          ))}
+
+                          <div className="ir-chart-bars">
+                            {chartData.map((point) => {
+                              const investedHeight =
+                                (point.invested / yAxisMax) * 100;
+                              const returnsHeight =
+                                (point.returns / yAxisMax) * 100;
+
+                              return (
+                                <div
+                                  className="ir-chart-slot"
+                                  key={`bar-${point.age}`}
+                                >
+                                  <div className="ir-chart-stack">
+                                    <div
+                                      className="ir-chart-bar ir-chart-bar-invested"
+                                      style={{ height: `${investedHeight}%` }}
+                                    />
+                                    <div
+                                      className="ir-chart-bar ir-chart-bar-returns"
+                                      style={{ height: `${returnsHeight}%` }}
+                                    />
+                                  </div>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+
+                        <div className="ir-chart-xlabels">
+                          {chartData.map((point, index) => {
+                            const shouldShowLabel =
+                              index % 2 === 0 ||
+                              index === chartData.length - 1;
+
+                            return (
+                              <div
+                                className="ir-chart-slot"
+                                key={`label-${point.age}`}
+                              >
+                                <span className="ir-chart-xlabel">
+                                  {shouldShowLabel
+                                    ? `${isEnglish ? "Age" : "Alter"}: ${point.age}`
+                                    : "\u00a0"}
+                                </span>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="mt-12 flex flex-col gap-[26px]">
+                      <div className="ir-slider-label-container">
+                        <h2>{isEnglish ? "Final age" : "Endalter"}</h2>
+                      </div>
+
+                      <div className="ir-input-row">
+                        <p>
+                          {isEnglish
+                            ? "Until what age do you want to keep investing?"
+                            : "Bis zu welchem Alter möchtest du investieren?"}
+                        </p>
+                        <div className="inline-flex w-[80px] min-w-[80px] items-center justify-center rounded-[10px] bg-primary-light/30 p-2.5">
+                          <input
+                            type="number"
+                            className="vr-input border-none! h-auto w-full! bg-transparent text-center outline-0 p-0! font-outfit font-light text-lg text-primary leading-none"
+                            value={chartEndAge}
+                            onChange={(e) =>
+                              handleChartEndAgeInputChange(e.target.value)
+                            }
+                            onBlur={() => handleChartEndAgeChange(chartEndAge)}
+                            min={minEndAge}
+                            max={maxChartAge}
+                          />
+                        </div>
+                      </div>
+
+                      <div className="ir-slider-body-container">
+                        <div className="ir-slider-body">
+                          <NoUiSlider
+                            min={minEndAge}
+                            max={maxChartAge}
+                            step={1}
+                            start={chartEndAge}
+                            onSlide={(value) =>
+                              handleChartEndAgeChange(value)
+                            }
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        )}
 
         {/* CTA Section */}
         <div

@@ -23,7 +23,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Allgemeine Hinweise
           </h3>
-          <p className="mb-3">
+          <p>
             Die folgenden Hinweise geben einen einfachen Überblick darüber, was
             mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website
             besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie
@@ -39,7 +39,7 @@ export default function DatenschutzPage() {
           <h4 className="mt-[8px] mb-[16px] text-[24px] font-medium leading-tight text-text-dark">
             Wer ist verantwortlich für die Datenerfassung auf dieser Website?
           </h4>
-          <p className="mb-3">
+          <p>
             Die Datenverarbeitung auf dieser Website erfolgt durch den
             Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt
             „Hinweis zur Verantwortlichen Stelle" in dieser
@@ -49,12 +49,12 @@ export default function DatenschutzPage() {
           <h4 className="mt-[8px] mb-[16px] text-[24px] font-medium leading-tight text-text-dark">
             Wie erfassen wir Ihre Daten?
           </h4>
-          <p className="mb-3">
+          <p>
             Ihre Daten werden zum einen dadurch erhoben, dass Sie uns diese
             mitteilen. Hierbei kann es sich z.&nbsp;B. um Daten handeln, die Sie
             in ein Kontaktformular eingeben.
           </p>
-          <p className="mb-3">
+          <p>
             Andere Daten werden automatisch oder nach Ihrer Einwilligung beim
             Besuch der Website durch unsere IT-Systeme erfasst. Das sind vor
             allem technische Daten (z.&nbsp;B. Internetbrowser, Betriebssystem
@@ -65,7 +65,7 @@ export default function DatenschutzPage() {
           <h4 className="mt-[8px] mb-[16px] text-[24px] font-medium leading-tight text-text-dark">
             Wofür nutzen wir Ihre Daten?
           </h4>
-          <p className="mb-3">
+          <p>
             Ein Teil der Daten wird erhoben, um eine fehlerfreie Bereitstellung
             der Website zu gewährleisten. Andere Daten können zur Analyse Ihres
             Nutzerverhaltens verwendet werden.
@@ -74,7 +74,7 @@ export default function DatenschutzPage() {
           <h4 className="mt-[8px] mb-[16px] text-[24px] font-medium leading-tight text-text-dark">
             Welche Rechte haben Sie bezüglich Ihrer Daten?
           </h4>
-          <p className="mb-3">
+          <p>
             Sie haben jederzeit das Recht, unentgeltlich Auskunft über Herkunft,
             Empfänger und Zweck Ihrer gespeicherten personenbezogenen Daten zu
             erhalten. Sie haben außerdem ein Recht, die Berichtigung oder
@@ -85,7 +85,7 @@ export default function DatenschutzPage() {
             personenbezogenen Daten zu verlangen. Des Weiteren steht Ihnen ein
             Beschwerderecht bei der zuständigen Aufsichtsbehörde zu.
           </p>
-          <p className="mb-3">
+          <p>
             Hierzu sowie zu weiteren Fragen zum Thema Datenschutz können Sie
             sich jederzeit an uns wenden.
           </p>
@@ -93,12 +93,12 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Analyse-Tools und Tools von Dritt­anbietern
           </h3>
-          <p className="mb-3">
+          <p>
             Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch
             ausgewertet werden. Das geschieht vor allem mit sogenannten
             Analyseprogrammen.
           </p>
-          <p className="mb-3">
+          <p>
             Detaillierte Informationen zu diesen Analyseprogrammen finden Sie in
             der folgenden Datenschutzerklärung.
           </p>
@@ -107,30 +107,30 @@ export default function DatenschutzPage() {
           <h2 className="mt-[8px] mb-[16px] text-[32px] font-medium leading-tight text-text-dark">
             2. Hosting
           </h2>
-          <p className="mb-3">
+          <p>
             Wir hosten die Inhalte unserer Website bei folgendem Anbieter:
           </p>
 
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Hetzner
           </h3>
-          <p className="mb-3">
+          <p>
             Anbieter ist die Hetzner Online GmbH, Industriestr. 25, 91710
             Gunzenhausen (nachfolgend Hetzner).
           </p>
-          <p className="mb-3">
+          <p>
             Details entnehmen Sie der Datenschutzerklärung von Hetzner:{" "}
             <a
               href="https://www.hetzner.com/de/rechtliches/datenschutz"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://www.hetzner.com/de/rechtliches/datenschutz
             </a>
             .
           </p>
-          <p className="mb-3">
+          <p>
             Die Verwendung von Hetzner erfolgt auf Grundlage von Art. 6 Abs. 1
             lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer
             möglichst zuverlässigen Darstellung unserer Website. Sofern eine
@@ -145,7 +145,7 @@ export default function DatenschutzPage() {
           <h4 className="mt-[8px] mb-[16px] text-[24px] font-medium leading-tight text-text-dark">
             Auftragsverarbeitung
           </h4>
-          <p className="mb-3">
+          <p>
             Wir haben einen Vertrag über Auftragsverarbeitung (AVV) zur Nutzung
             des oben genannten Dienstes geschlossen. Hierbei handelt es sich um
             einen datenschutzrechtlich vorgeschriebenen Vertrag, der
@@ -162,13 +162,13 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Datenschutz
           </h3>
-          <p className="mb-3">
+          <p>
             Die Betreiber dieser Seiten nehmen den Schutz Ihrer persönlichen
             Daten sehr ernst. Wir behandeln Ihre personenbezogenen Daten
             vertraulich und entsprechend den gesetzlichen
             Datenschutzvorschriften sowie dieser Datenschutzerklärung.
           </p>
-          <p className="mb-3">
+          <p>
             Wenn Sie diese Website benutzen, werden verschiedene
             personenbezogene Daten erhoben. Personenbezogene Daten sind Daten,
             mit denen Sie persönlich identifiziert werden können. Die vorliegende
@@ -176,7 +176,7 @@ export default function DatenschutzPage() {
             wir sie nutzen. Sie erläutert auch, wie und zu welchem Zweck das
             geschieht.
           </p>
-          <p className="mb-3">
+          <p>
             Wir weisen darauf hin, dass die Datenübertragung im Internet
             (z.&nbsp;B. bei der Kommunikation per E-Mail) Sicherheitslücken
             aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff
@@ -186,19 +186,19 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Hinweis zur verantwortlichen Stelle
           </h3>
-          <p className="mb-3">
+          <p>
             Die verantwortliche Stelle für die Datenverarbeitung auf dieser
             Website ist:
           </p>
-          <p className="mb-3">
+          <p>
             Invest4Kids GmbH, Fabrikstraße 7, 24103 Kiel
           </p>
-          <p className="mb-3">
+          <p>
             Telefon: +49 123 456789
             <br />
             E-Mail: info@invest4kids.de
           </p>
-          <p className="mb-3">
+          <p>
             Verantwortliche Stelle ist die natürliche oder juristische Person,
             die allein oder gemeinsam mit anderen über die Zwecke und Mittel der
             Verarbeitung von personenbezogenen Daten (z.&nbsp;B. Namen,
@@ -208,7 +208,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Speicherdauer
           </h3>
-          <p className="mb-3">
+          <p>
             Soweit innerhalb dieser Datenschutzerklärung keine speziellere
             Speicherdauer genannt wurde, verbleiben Ihre personenbezogenen Daten
             bei uns, bis der Zweck für die Datenverarbeitung entfällt. Wenn Sie
@@ -224,7 +224,7 @@ export default function DatenschutzPage() {
             Allgemeine Hinweise zu den Rechtsgrundlagen der Datenverarbeitung
             auf dieser Website
           </h3>
-          <p className="mb-3">
+          <p>
             Sofern Sie in die Datenverarbeitung eingewilligt haben, verarbeiten
             wir Ihre personenbezogenen Daten auf Grundlage von Art. 6 Abs. 1
             lit. a DSGVO bzw. Art. 9 Abs. 2 lit. a DSGVO, sofern besondere
@@ -251,7 +251,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Empfänger von personenbezogenen Daten
           </h3>
-          <p className="mb-3">
+          <p>
             Im Rahmen unserer Geschäftstätigkeit arbeiten wir mit verschiedenen
             externen Stellen zusammen. Dabei ist teilweise auch eine
             Übermittlung von personenbezogenen Daten an diese externen Stellen
@@ -271,7 +271,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Widerruf Ihrer Einwilligung zur Datenverarbeitung
           </h3>
-          <p className="mb-3">
+          <p>
             Viele Datenverarbeitungsvorgänge sind nur mit Ihrer ausdrücklichen
             Einwilligung möglich. Sie können eine bereits erteilte Einwilligung
             jederzeit widerrufen. Die Rechtmäßigkeit der bis zum Widerruf
@@ -282,7 +282,7 @@ export default function DatenschutzPage() {
             Widerspruchsrecht gegen die Datenerhebung in besonderen Fällen sowie
             gegen Direktwerbung (Art. 21 DSGVO)
           </h3>
-          <p className="mb-3">
+          <p>
             Jederzeit das Recht, aus Gründen, die sich aus Ihrer besonderen
             Situation ergeben, gegen die Verarbeitung Ihrer personenbezogenen
             Daten Widerspruch einzulegen. Dies gilt auch für ein auf diese
@@ -296,7 +296,7 @@ export default function DatenschutzPage() {
             Verteidigung von Rechtsansprüchen (Widerspruch nach Art. 21 Abs. 1
             DSGVO).
           </p>
-          <p className="mb-3">
+          <p>
             Werden Ihre personenbezogenen Daten verarbeitet, um Direktwerbung zu
             betreiben, so haben Sie das Recht, jederzeit Widerspruch gegen die
             Verarbeitung Sie betreffender personenbezogener Daten zum Zwecke
@@ -310,7 +310,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Beschwerde­recht bei der zuständigen Aufsichts­behörde
           </h3>
-          <p className="mb-3">
+          <p>
             Im Falle von Verstößen gegen die DSGVO steht den Betroffenen ein
             Beschwerderecht bei einer Aufsichtsbehörde, insbesondere in dem
             Mitgliedstaat ihres gewöhnlichen Aufenthalts, ihres Arbeitsplatzes
@@ -322,7 +322,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Recht auf Daten­übertrag­barkeit
           </h3>
-          <p className="mb-3">
+          <p>
             Sie haben das Recht, Daten, die wir auf Grundlage Ihrer
             Einwilligung oder in Erfüllung eines Vertrags automatisiert
             verarbeiten, an sich oder an einen Dritten in einem gängigen,
@@ -334,7 +334,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Auskunft, Berichtigung und Löschung
           </h3>
-          <p className="mb-3">
+          <p>
             Sie haben im Rahmen der geltenden gesetzlichen Bestimmungen
             jederzeit das Recht auf unentgeltliche Auskunft über Ihre
             gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger
@@ -347,7 +347,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Recht auf Einschränkung der Verarbeitung
           </h3>
-          <p className="mb-3">
+          <p>
             Sie haben das Recht, die Einschränkung der Verarbeitung Ihrer
             personenbezogenen Daten zu verlangen. Hierzu können Sie sich
             jederzeit an uns wenden. Das Recht auf Einschränkung der
@@ -381,7 +381,7 @@ export default function DatenschutzPage() {
               Verarbeitung Ihrer personenbezogenen Daten zu verlangen.
             </li>
           </ul>
-          <p className="mb-3">
+          <p>
             Wenn Sie die Verarbeitung Ihrer personenbezogenen Daten
             eingeschränkt haben, dürfen diese Daten – von ihrer Speicherung
             abgesehen – nur mit Ihrer Einwilligung oder zur Geltendmachung,
@@ -399,7 +399,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Cookies
           </h3>
-          <p className="mb-3">
+          <p>
             Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind
             kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an.
             Sie werden entweder vorübergehend für die Dauer einer Sitzung
@@ -409,21 +409,21 @@ export default function DatenschutzPage() {
             gespeichert, bis Sie diese selbst löschen oder eine automatische
             Löschung durch Ihren Webbrowser erfolgt.
           </p>
-          <p className="mb-3">
+          <p>
             Cookies können von uns (First-Party-Cookies) oder von
             Drittunternehmen stammen (sog. Third-Party-Cookies).
             Third-Party-Cookies ermöglichen die Einbindung bestimmter
             Dienstleistungen von Drittunternehmen innerhalb von Webseiten
             (z.&nbsp;B. Cookies zur Abwicklung von Zahlungsdienstleistungen).
           </p>
-          <p className="mb-3">
+          <p>
             Cookies haben verschiedene Funktionen. Zahlreiche Cookies sind
             technisch notwendig, da bestimmte Webseitenfunktionen ohne diese
             nicht funktionieren würden (z.&nbsp;B. die Warenkorbfunktion oder
             die Anzeige von Videos). Andere Cookies können zur Auswertung des
             Nutzerverhaltens oder zu Werbezwecken verwendet werden.
           </p>
-          <p className="mb-3">
+          <p>
             Cookies, die zur Durchführung des elektronischen
             Kommunikationsvorgangs, zur Bereitstellung bestimmter, von Ihnen
             erwünschter Funktionen (z.&nbsp;B. für die Warenkorbfunktion) oder
@@ -439,7 +439,7 @@ export default function DatenschutzPage() {
             (Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG); die
             Einwilligung ist jederzeit widerrufbar.
           </p>
-          <p className="mb-3">
+          <p>
             Sie können Ihren Browser so einstellen, dass Sie über das Setzen von
             Cookies informiert werden und Cookies nur im Einzelfall erlauben,
             die Annahme von Cookies für bestimmte Fälle oder generell
@@ -447,7 +447,7 @@ export default function DatenschutzPage() {
             Schließen des Browsers aktivieren. Bei der Deaktivierung von Cookies
             kann die Funktionalität dieser Website eingeschränkt sein.
           </p>
-          <p className="mb-3">
+          <p>
             Welche Cookies und Dienste auf dieser Website eingesetzt werden,
             können Sie dieser Datenschutzerklärung entnehmen.
           </p>
@@ -460,12 +460,12 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Google Analytics
           </h3>
-          <p className="mb-3">
+          <p>
             Diese Website nutzt Funktionen des Webanalysedienstes Google
             Analytics. Anbieter ist die Google Ireland Limited („Google"), Gordon
             House, Barrow Street, Dublin 4, Irland.
           </p>
-          <p className="mb-3">
+          <p>
             Google Analytics ermöglicht es dem Websitebetreiber, das Verhalten
             der Websitebesucher zu analysieren. Hierbei erhält der
             Websitebetreiber verschiedene Nutzungsdaten, wie z.&nbsp;B.
@@ -473,14 +473,14 @@ export default function DatenschutzPage() {
             des Nutzers. Diese Daten werden in einer User-ID zusammengefasst und
             dem jeweiligen Endgerät des Websitebesuchers zugeordnet.
           </p>
-          <p className="mb-3">
+          <p>
             Des Weiteren können wir mit Google Analytics u.&nbsp;a. Ihre Maus-
             und Scrollbewegungen und Klicks aufzeichnen. Ferner verwendet Google
             Analytics verschiedene Modellierungsansätze, um die erfassten
             Datensätze zu ergänzen und setzt Machine-Learning-Technologien bei
             der Datenanalyse ein.
           </p>
-          <p className="mb-3">
+          <p>
             Google Analytics verwendet Technologien, die die Wiedererkennung des
             Nutzers zum Zwecke der Analyse des Nutzerverhaltens ermöglichen
             (z.&nbsp;B. Cookies oder Device-Fingerprinting). Die von Google
@@ -488,12 +488,12 @@ export default function DatenschutzPage() {
             der Regel an einen Server von Google in den USA übertragen und dort
             gespeichert.
           </p>
-          <p className="mb-3">
+          <p>
             Die Nutzung dieses Dienstes erfolgt auf Grundlage Ihrer
             Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG.
             Die Einwilligung ist jederzeit widerrufbar.
           </p>
-          <p className="mb-3">
+          <p>
             Die Datenübertragung in die USA wird auf die
             Standardvertragsklauseln der EU-Kommission gestützt. Details finden
             Sie hier:{" "}
@@ -501,13 +501,13 @@ export default function DatenschutzPage() {
               href="https://privacy.google.com/businesses/controllerterms/mccs/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://privacy.google.com/businesses/controllerterms/mccs/
             </a>
             .
           </p>
-          <p className="mb-3">
+          <p>
             Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US
             Data Privacy Framework" (DPF). Der DPF ist ein Übereinkommen
             zwischen der Europäischen Union und den USA, der die Einhaltung
@@ -519,7 +519,7 @@ export default function DatenschutzPage() {
               href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark break-all"
+              className="text-link hover:text-primary-dark break-all"
             >
               https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt000000001L5AAI&amp;status=Active
             </a>
@@ -528,7 +528,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             IP Anonymisierung
           </h3>
-          <p className="mb-3">
+          <p>
             Die Google Analytics IP-Anonymisierung ist aktiviert. Dadurch wird
             Ihre IP-Adresse von Google innerhalb von Mitgliedstaaten der
             Europäischen Union oder in anderen Vertragsstaaten des Abkommens
@@ -547,7 +547,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Browser Plugin
           </h3>
-          <p className="mb-3">
+          <p>
             Sie können die Erfassung und Verarbeitung Ihrer Daten durch Google
             verhindern, indem Sie das unter dem folgenden Link verfügbare
             Browser-Plugin herunterladen und installieren:{" "}
@@ -555,20 +555,20 @@ export default function DatenschutzPage() {
               href="https://tools.google.com/dlpage/gaoptout?hl=de"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://tools.google.com/dlpage/gaoptout?hl=de
             </a>
             .
           </p>
-          <p className="mb-3">
+          <p>
             Mehr Informationen zum Umgang mit Nutzerdaten bei Google Analytics
             finden Sie in der Datenschutzerklärung von Google:{" "}
             <a
               href="https://support.google.com/analytics/answer/6004245?hl=de"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://support.google.com/analytics/answer/6004245?hl=de
             </a>
@@ -578,11 +578,11 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Mouseflow
           </h3>
-          <p className="mb-3">
+          <p>
             Diese Website nutzt Mouseflow, ein Web-Analyse-Tool der Mouseflow
             ApS, Flaesketorvet 68, 1711 Kopenhagen, Dänemark.
           </p>
-          <p className="mb-3">
+          <p>
             Mouseflow zeichnet zufällig ausgewählte Einzelbesuche auf (nur mit
             anonymisierter IP-Adresse). Dadurch entsteht ein Protokoll der
             Mausbewegungen, Mausklicks und Tastaturinteraktionen mit dem Ziel,
@@ -592,12 +592,12 @@ export default function DatenschutzPage() {
             Dritte weitergegeben. Die Speicherung und Verarbeitung der erhobenen
             Daten erfolgt innerhalb der EU.
           </p>
-          <p className="mb-3">
+          <p>
             Die Nutzung dieses Dienstes erfolgt auf Grundlage Ihrer
             Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG.
             Die Einwilligung ist jederzeit widerrufbar.
           </p>
-          <p className="mb-3">
+          <p>
             Wenn Sie keine Aufzeichnung wünschen, können Sie diese auf allen
             Websites, die Mouseflow einsetzen, global für den Browser, den Sie
             gerade verwenden, unter dem folgenden Link deaktivieren:{" "}
@@ -605,19 +605,19 @@ export default function DatenschutzPage() {
               href="https://mouseflow.de/opt-out/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://mouseflow.de/opt-out/
             </a>
           </p>
-          <p className="mb-3">
+          <p>
             Weitere Informationen zum Datenschutz und zur Datensicherheit von
             Mouseflow finden Sie hier:{" "}
             <a
               href="https://mouseflow.com/privacy/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://mouseflow.com/privacy/
             </a>
@@ -627,23 +627,23 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             JotForm
           </h3>
-          <p className="mb-3">
+          <p>
             Diese Website nutzt JotForm, einen Dienst der JotForm Inc., 111 Pine
             St. Suite 1815, San Francisco, CA 94111, USA, zur Erstellung und
             Verwaltung von Online-Formularen.
           </p>
-          <p className="mb-3">
+          <p>
             Die Formulare werden genutzt, um Leads zu generieren, wobei
             personenbezogene Daten wie Name, E-Mail-Adresse und Telefonnummer
             erhoben werden. Diese Daten werden verwendet, um Sie zu kontaktieren
             und Ihre Anfrage zu bearbeiten.
           </p>
-          <p className="mb-3">
+          <p>
             Die Nutzung dieses Dienstes erfolgt auf Grundlage Ihrer
             Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TTDSG.
             Die Einwilligung ist jederzeit widerrufbar.
           </p>
-          <p className="mb-3">
+          <p>
             JotForm speichert und verarbeitet Ihre Daten auf Servern innerhalb
             und außerhalb der EU. Weitere Informationen zu den
             Datenschutzpraktiken von JotForm finden Sie hier:{" "}
@@ -651,13 +651,13 @@ export default function DatenschutzPage() {
               href="https://www.jotform.com/privacy/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://www.jotform.com/privacy/
             </a>
             .
           </p>
-          <p className="mb-3">
+          <p>
             Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US
             Data Privacy Framework" (DPF). Der DPF ist ein Übereinkommen
             zwischen der Europäischen Union und den USA, der die Einhaltung
@@ -669,7 +669,7 @@ export default function DatenschutzPage() {
               href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt0000000TNlNAAW&status=Active"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark break-all"
+              className="text-link hover:text-primary-dark break-all"
             >
               https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt0000000TNlNAAW&amp;status=Active
             </a>
@@ -684,12 +684,12 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             YouTube mit erweitertem Datenschutz
           </h3>
-          <p className="mb-3">
+          <p>
             Diese Website bindet Videos der Website YouTube ein. Betreiber der
             Website ist die Google Ireland Limited („Google"), Gordon House,
             Barrow Street, Dublin 4, Irland.
           </p>
-          <p className="mb-3">
+          <p>
             Wenn Sie eine dieser Website besuchen, auf denen YouTube eingebunden
             ist, wird eine Verbindung zu den Servern von YouTube hergestellt.
             Dabei wird dem YouTube-Server mitgeteilt, welche unserer Seiten Sie
@@ -698,7 +698,7 @@ export default function DatenschutzPage() {
             Profil zuzuordnen. Dies können Sie verhindern, indem Sie sich aus
             Ihrem YouTube-Account ausloggen.
           </p>
-          <p className="mb-3">
+          <p>
             Wir nutzen YouTube im erweiterten Datenschutzmodus. Videos, die im
             erweiterten Datenschutzmodus abgespielt werden, werden nach Aussage
             von YouTube nicht zur Personalisierung des Surfens auf YouTube
@@ -713,18 +713,18 @@ export default function DatenschutzPage() {
               href="https://support.google.com/youtube/answer/171780"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://support.google.com/youtube/answer/171780
             </a>
             .
           </p>
-          <p className="mb-3">
+          <p>
             Gegebenenfalls können nach der Aktivierung eines YouTube-Videos
             weitere Datenverarbeitungsvorgänge ausgelöst werden, auf die wir
             keinen Einfluss haben.
           </p>
-          <p className="mb-3">
+          <p>
             Die Nutzung von YouTube erfolgt im Interesse einer ansprechenden
             Darstellung unserer Online-Angebote. Dies stellt ein berechtigtes
             Interesse im Sinne von Art. 6 Abs. 1 lit. f DSGVO dar. Sofern eine
@@ -735,20 +735,20 @@ export default function DatenschutzPage() {
             (z.&nbsp;B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die
             Einwilligung ist jederzeit widerrufbar.
           </p>
-          <p className="mb-3">
+          <p>
             Weitere Informationen über Datenschutz bei YouTube finden Sie in
             deren Datenschutzerklärung unter:{" "}
             <a
               href="https://policies.google.com/privacy?hl=de"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://policies.google.com/privacy?hl=de
             </a>
             .
           </p>
-          <p className="mb-3">
+          <p>
             Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US
             Data Privacy Framework" (DPF). Der DPF ist ein Übereinkommen
             zwischen der Europäischen Union und den USA, der die Einhaltung
@@ -760,7 +760,7 @@ export default function DatenschutzPage() {
               href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark break-all"
+              className="text-link hover:text-primary-dark break-all"
             >
               https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt000000001L5AAI&amp;status=Active
             </a>
@@ -770,13 +770,13 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Google Fonts
           </h3>
-          <p className="mb-3">
+          <p>
             Diese Seite nutzt zur einheitlichen Darstellung von Schriftarten so
             genannte Google Fonts, die von Google bereitgestellt werden. Beim
             Aufruf einer Seite lädt Ihr Browser die benötigten Fonts in ihren
             Browsercache, um Texte und Schriftarten korrekt anzuzeigen.
           </p>
-          <p className="mb-3">
+          <p>
             Zu diesem Zweck muss der von Ihnen verwendete Browser Verbindung zu
             den Servern von Google aufnehmen. Hierdurch erlangt Google Kenntnis
             darüber, dass über Ihre IP-Adresse diese Website aufgerufen wurde.
@@ -790,17 +790,17 @@ export default function DatenschutzPage() {
             Endgerät des Nutzers (z.&nbsp;B. Device-Fingerprinting) im Sinne
             des TTDSG umfasst. Die Einwilligung ist jederzeit widerrufbar.
           </p>
-          <p className="mb-3">
+          <p>
             Wenn Ihr Browser Google Fonts nicht unterstützt, wird eine
             Standardschrift von Ihrem Computer genutzt.
           </p>
-          <p className="mb-3">
+          <p>
             Weitere Informationen zu Google Fonts finden Sie unter{" "}
             <a
               href="https://developers.google.com/fonts/faq"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://developers.google.com/fonts/faq
             </a>{" "}
@@ -809,13 +809,13 @@ export default function DatenschutzPage() {
               href="https://policies.google.com/privacy?hl=de"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://policies.google.com/privacy?hl=de
             </a>
             .
           </p>
-          <p className="mb-3">
+          <p>
             Das Unternehmen verfügt über eine Zertifizierung nach dem „EU-US
             Data Privacy Framework" (DPF). Der DPF ist ein Übereinkommen
             zwischen der Europäischen Union und den USA, der die Einhaltung
@@ -827,7 +827,7 @@ export default function DatenschutzPage() {
               href="https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&id=a2zt000000001L5AAI&status=Active"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark break-all"
+              className="text-link hover:text-primary-dark break-all"
             >
               https://www.dataprivacyframework.gov/s/participant-search/participant-detail?contact=true&amp;id=a2zt000000001L5AAI&amp;status=Active
             </a>
@@ -837,12 +837,12 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Google reCAPTCHA
           </h3>
-          <p className="mb-3">
+          <p>
             Wir nutzen „Google reCAPTCHA" (im Folgenden „reCAPTCHA") auf dieser
             Website. Anbieter ist die Google Ireland Limited („Google"), Gordon
             House, Barrow Street, Dublin 4, Irland.
           </p>
-          <p className="mb-3">
+          <p>
             Mit reCAPTCHA soll überprüft werden, ob die Dateneingabe auf dieser
             Website (z.&nbsp;B. in einem Kontaktformular) durch einen Menschen
             oder durch ein automatisiertes Programm erfolgt. Hierzu analysiert
@@ -854,12 +854,12 @@ export default function DatenschutzPage() {
             Mausbewegungen). Die bei der Analyse erfassten Daten werden an
             Google weitergeleitet.
           </p>
-          <p className="mb-3">
+          <p>
             Die reCAPTCHA-Analysen laufen vollständig im Hintergrund.
             Websitebesucher werden nicht darauf hingewiesen, dass eine Analyse
             stattfindet.
           </p>
-          <p className="mb-3">
+          <p>
             Die Speicherung und Analyse der Daten erfolgt auf Grundlage von Art.
             6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes
             Interesse daran, seine Webangebote vor missbräuchlicher
@@ -871,7 +871,7 @@ export default function DatenschutzPage() {
             (z.&nbsp;B. Device-Fingerprinting) im Sinne des TTDSG umfasst. Die
             Einwilligung ist jederzeit widerrufbar.
           </p>
-          <p className="mb-3">
+          <p>
             Weitere Informationen zu Google reCAPTCHA entnehmen Sie den
             Google-Datenschutzbestimmungen und den Google Nutzungsbedingungen
             unter folgenden Links:{" "}
@@ -879,7 +879,7 @@ export default function DatenschutzPage() {
               href="https://policies.google.com/privacy?hl=de"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://policies.google.com/privacy?hl=de
             </a>{" "}
@@ -888,7 +888,7 @@ export default function DatenschutzPage() {
               href="https://policies.google.com/terms?hl=de"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-primary underline hover:text-primary-dark"
+              className="text-link hover:text-primary-dark"
             >
               https://policies.google.com/terms?hl=de
             </a>
@@ -903,7 +903,7 @@ export default function DatenschutzPage() {
           <h3 className="mt-[8px] mb-[16px] text-[28px] font-medium leading-tight text-text-dark">
             Interne Tools und Dienste
           </h3>
-          <p className="mb-3">
+          <p>
             Unsere Website nutzt intern entwickelte Plugins und Integrationen
             zur Verbesserung der Benutzererfahrung und der Datensicherheit.
             Diese Tools erfassen und verarbeiten keine personenbezogenen Daten
@@ -918,7 +918,7 @@ export default function DatenschutzPage() {
           <h5 className="mt-[8px] mb-[16px] text-[24px] font-medium leading-tight text-text-dark">
             Automatische Teilnahme
           </h5>
-          <p className="mb-3">
+          <p>
             Nach Vertragsabschluss nehmen wir unsere Kund:innen automatisch in
             unser Tippgeber-Programm auf, um ihnen einen persönlichen
             Empfehlungslink bereitzustellen.
@@ -945,7 +945,7 @@ export default function DatenschutzPage() {
           <h5 className="mt-[8px] mb-[16px] text-[24px] font-medium leading-tight text-text-dark">
             Rechtsgrundlage
           </h5>
-          <p className="mb-3">
+          <p>
             Die Verarbeitung erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f
             DSGVO (berechtigtes Interesse an Kundenbindung und
             Empfehlungsmarketing).
@@ -954,7 +954,7 @@ export default function DatenschutzPage() {
           <h5 className="mt-[8px] mb-[16px] text-[24px] font-medium leading-tight text-text-dark">
             Dienstleister
           </h5>
-          <p className="mb-3">
+          <p>
             Für die technische Abwicklung nutzen wir die Software „Referral
             Rock" (Referral Rock Inc., Sitz: USA). Dabei werden die oben
             genannten Daten ausschließlich zur Erstellung und Verwaltung des
@@ -967,7 +967,7 @@ export default function DatenschutzPage() {
           <h5 className="mt-[8px] mb-[16px] text-[24px] font-medium leading-tight text-text-dark">
             Freiwilligkeit &amp; Widerspruch
           </h5>
-          <p className="mb-3">
+          <p>
             Die Teilnahme am Tippgeber-Programm ist freiwillig. Eine aktive
             Nutzung des Links ist nicht erforderlich. Kund:innen können der
             Teilnahme jederzeit widersprechen. In diesem Fall werden die Daten
@@ -978,7 +978,7 @@ export default function DatenschutzPage() {
           <h2 className="mt-[8px] mb-[16px] text-[32px] font-medium leading-tight text-text-dark">
             9. Änderungen dieser Datenschutzerklärung
           </h2>
-          <p className="mb-3">
+          <p>
             Wir behalten uns das Recht vor, diese Datenschutzerklärung von Zeit
             zu Zeit anzupassen, damit sie stets den aktuellen rechtlichen
             Anforderungen entspricht oder um Änderungen unserer Leistungen in

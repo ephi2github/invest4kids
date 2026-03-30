@@ -19,6 +19,7 @@
   --color-bg-blue-mist: #F2FAFA;
   --color-border: #E1E2E2;
   --color-border-light: #CCCED0;
+  --color-link: #CC3366;
 
   --animate-known-from-marquee: known-from-marquee 20s linear infinite;
 }

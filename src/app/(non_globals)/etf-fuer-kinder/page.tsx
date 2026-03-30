@@ -18,7 +18,6 @@ import FixedSocialRail from "@/components/ui/FixedSocialRail";
 import headerLogo from "@/assets/images/header/invest4kids-logo.png";
 import flagDe from "@/assets/images/header/flag-de.svg";
 import flagGb from "@/assets/images/header/flag-gb.svg";
-import "./etf-fuer-kinder.css";
 
 const PERSPECTIVE_URL =
   "https://funnel.perspective.co/60b7c8d2bcad43001f5c35a3/690b34a62100cd003c13e6ad/";
@@ -241,7 +240,7 @@ function LpHeader() {
             alt="Invest4Kids Logo"
             width={150}
             height={40}
-            className="h-auto w-20 lg:w-[150px]"
+            className="h-auto w-20"
             priority
           />
         </Link>
