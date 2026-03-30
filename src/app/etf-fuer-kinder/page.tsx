@@ -613,7 +613,7 @@ export default function EtfFuerKinderPage() {
       <main>
 
       {/* ========== 1. HERO ========== */}
-      <section className="relative overflow-hidden bg-linear-to-b from-primary-light/15 to-primary-light/20 pt-[30px] pb-[74px] md:pt-12.5 md:pb-25">
+      <section className="relative overflow-hidden bg-linear-to-b from-white to-primary-light/20 pt-[30px] pb-[74px] md:pt-12.5 md:pb-25">
         <div className="mx-auto flex max-w-[1540px] flex-col gap-10 px-6 lg:grid lg:grid-flow-col lg:items-start lg:px-0">
           {/* Left: Video */}
           <div className="order-2 flex w-full justify-center pr-0 lg:order-1 lg:w-[600px] lg:justify-end lg:pr-3">
@@ -738,10 +738,10 @@ export default function EtfFuerKinderPage() {
       <EtfTestimonialsCarouselSection testimonials={testimonials} />
 
       {/* ========== 11. QUOTE + FINAL CTA ========== */}
-      <section className="bg-[--color-bg-light-blue] py-[72px] md:py-[120px]">
+      <section className="bg-bg-light-blue py-[72px] md:py-[120px]">
         <div className="relative mx-auto w-full max-w-[1460px] px-6 md:px-8 lg:px-0">
           <div
-            className="pointer-events-none absolute left-6 top-0 z-0 md:left-8 md:-top-1"
+            className="pointer-events-none absolute left-6 top-0 z-0 md:left-3 md:-top-10"
             aria-hidden="true"
           >
             <svg
@@ -749,8 +749,8 @@ export default function EtfFuerKinderPage() {
               focusable="false"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 512 512"
-              width={170}
-              height={190}
+              width={175}
+              height={200}
             >
               <path
                 fill="#E5EBEF"
@@ -759,13 +759,13 @@ export default function EtfFuerKinderPage() {
             </svg>
           </div>
 
-          <div className="relative z-10 w-full max-w-[900px]">
-            <p className="text-[#133A7D] font-outfit text-[27px] sm:text-[32px] md:text-[44px] font-medium leading-[1.18]">
+          <div className="relative z-10 w-full">
+            <p className="text-[#133A7D] font-outfit text-[27px] md:text-[36px] font-medium leading-[1.18]">
               Das Investieren in die Zukunft deines Kindes ist mehr als nur eine
               finanzielle Entscheidung – es ist ein Akt der Liebe und Fürsorge.
             </p>
             <ShimmerCTA
-              className="mt-4 bg-linear-to-r from-[#F2BA2A] via-[#F4C84F] to-[#F6DA95] text-center
+              className="bg-linear-to-r from-[#F2BA2A] via-[#F4C84F] to-[#F6DA95] text-center
               shadow-[0_14px_32px_rgba(248,191,60,0.35)] after:hidden md:after:block"
             >
               Kostenlose Beratung sichern
